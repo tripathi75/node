@@ -1,86 +1,4453 @@
- <h2 class="page-header">Transporter Dashboard</h2>
-                                                               
-																
-<html>
+
+<!DOCTYPE html>
 <head>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+	<link rel=icon href="./wp-content/themes/maalbhaada/images/maalbhaada-fevicon.png" sizes="16x16" type="image/png">
+	<meta name="description" itemprop="description" content=" Express Distribution - Road, Air, Rail & End to End Logistics. Door to Door Delivery anywhere anytime. 21000+ pincodes. Next Day Delivery Options. Excess Baggage. Student & Bike Express. Art Express. Small 5 Kg Shipments to Full Truck Loads, Mumbai, Delhi, Bengaluru, Kolkata, Chennai, Ahmedabad, Hyderabad, Pune, Surat, Kanpur, Jaipur, Navi Mumbai, Lucknow, Nagpur, Indore, Patna, Bhopal, Ludhiana, Tirunelveli, Agra, Vadodara, Gorakhpur, Nashik, Pimpri, Kalyan, Thane, Meerut, Nowrangapur, Faridabad, Ghaziabad, Dombivli, Rajkot, Varanasi, Amritsar, Allahabad, Visakhapatnam, Teni, Jabalpur, Haora, Aurangabad, Shivaji Nagar, Solapur, Srinagar, Chandigarh, Coimbatore, Jodhpur, Madurai, Guwahati, Gwalior, Vijayawada, & 21000+ pincodes, Now Courier | Send any Shipment | Parcel through surface (road) or air across India. Door to Door Pickup & Delivery."/>
+   
+	<link rel="canonical" href="./">
+
+	<link rel="stylesheet" href="./wp-content/themes/maalbhaada/css/responsive.css" type="text/css" charset="utf-8" />
+	<meta name="google-site-verification" content="sNoKrG3Jr0-GTq0lAjXgYXdDXa3kvqEDRh-ycTcqbVg" /> 
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="./wp-content/themes/maalbhaada/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="./wp-content/themes/maalbhaada/dist/slippry.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="./wp-content/themes/maalbhaada/style.css" type="text/css" charset="utf-8" />
+	<link rel="stylesheet" href="./wp-content/themes/maalbhaada/css/font-awesome.min.css" type="text/css" charset="utf-8" />
+
+    <script src="./wp-content/themes/maalbhaada/js/jquery-1.11.3.js"></script>
+	<script src="./wp-content/themes/maalbhaada/js/jquery-bxslider-min.js"></script>
+  	<script src="./wp-content/themes/maalbhaada/js/jquery-ui.js"></script>
+    <script src="./wp-content/themes/maalbhaada/js/custom.js"></script>
+  	<script src="./wp-content/themes/maalbhaada/js/jquery-validator.js"></script>
+  	<script type="text/javascript" src="./wp-content/themes/maalbhaada/dist/slippry.min.js"></script>
+
+
+<script src="./wp-content/themes/maalbhaada/js/common.js"></script>
+<link rel="stylesheet" type="text/css" href="./wp-content/themes/maalbhaada/datetimepicker-master/jquery.datetimepicker.css"/ >
+<script src="./wp-content/themes/maalbhaada/datetimepicker-master/build/jquery.datetimepicker.full.min.js"></script>
+
+
+
+	<script>
+function checklogin()
+{
+document.frmLogin.custid.value=rem_spaces(document.frmLogin.custid.value);
+document.frmLogin.custpwd.value=rem_spaces(document.frmLogin.custpwd.value);
+	if (document.frmLogin.custid.value == "")
+	{
+		alert("Please enter the Customer ID.");
+		return false;
+	}
+	if (document.frmLogin.custpwd.value == "")
+	{
+		alert("Please enter the Password");
+		return false;
+	}
+ 
+}//end of function
+</script>
+
+
+<!--LeadSquared Tracking Code Start-->
+<script type="text/javascript" src="./wp-content/themes/maalbhaada/pickup-request/Tracker.js"></script>
+<script type="text/javascript">
+      pidTracker('17752');
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement,
+  m=s.getElementsByTagName[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43688991-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<script>
+_pe.subscribe();
+</script>
+           
+<!-- recaptcha -->
+<script src='https://www.google.com/recaptcha/api.js?render=6LcAwo8UAAAAABE5hvjhdbqHHbhpwZPoe9DDmEqM'></script>
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6LcAwo8UAAAAABE5hvjhdbqHHbhpwZPoe9DDmEqM', {action: 'call'})
+.then(function(token) {
+		var recaptchaResponse = document.getElementsByClassName('recaptchaResponse');
+
+			for (var i = 0; i < recaptchaResponse.length; i++) {
+			   recaptchaResponse[i].setAttribute("value", token);
+			}			
+});
+});
+
+</script>
+
+
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
+
+<!-- END recaptcha -->
+
 <style>
-
-#hiddenForm {
-
-	position: absolute;
-    left: 200px;
-    transition: 0.3s;
-    padding: 15px;
-    width: 150px;
-    text-decoration: none; 
-
+.social-icon2s{
+  float: right;
 }
 
-#mySidenav a {
-    position: absolute;
-    left: 10px;
-    transition: 0.1s;
-    padding: 15px;
-    width: 150px;
-    text-decoration: none;
-    font-size: 12px;
-    color: white;
-    border-radius: 0 5px 5px 0;
+.social-icon2s a{
+	
+	padding-left: 10px;
 }
-
-#mySidenav a:hover {
-    right: 0;
+header{
+	padding: 0 8% !important;
 }
-
-#mySidenav a:hover {
-    left: 0;
-}
-
-#add {
-    top: 80px;
-    background-color: #4CAF50;
-}
-
-#view {
-    top:140px;
-    background-color: #2196F3;
-}
-
-#payments {
-    top: 200px;
-    background-color: #f44336;
-}
-
-#history {
-    top: 260px;
-    background-color: #f44378;
+.header_cont{
+	max-width: 100% !important;
 }
 
 </style>
-</head>
-<body>
 
-<div id="mySidenav" class="sidenav">
-   
-  <a href="#" id="add" onclick="document.getElementById('hiddenForm').style.display = 'block'; return false;">My availability</a></p>
-  
-   <form action="/users/index" id= "hiddenForm"  style="display: none;"   method="post">
-	<textarea rows= "1" placeholder ="Name of Service" name = "name" ></textarea><br />
-      <textarea cols="60" rows="8" placeholder ="Desciption of Services" name = "desc"></textarea><br />
-	  <textarea rows= "1" placeholder ="Price" name = "price"> </textarea><br />
-      <input type="submit" value="Add Services" />
-   </form>
-  
-  
-  <a href="#" id="view">My Trips</a>
-  <a href="#" id="payments">Payments</a>
-  <a href="#" id="history">History</a>
 
-  </div>
-  
-<div style="margin-left:80px;">
-  
+  </head>
+
+<body class="home page-template page-template-dynamic_index page-template-dynamic_index-php page page-id-4578">
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKMLVWX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: https://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+var google_tag_params = {
+dynx_itemid: 'REPLACE_WITH_VALUE',
+dynx_itemid2: 'REPLACE_WITH_VALUE',
+dynx_pagetype: 'REPLACE_WITH_VALUE',
+dynx_totalvalue: 'REPLACE_WITH_VALUE',
+};
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 855219008;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/855219008/?guid=ON&amp;script=0"/>
 </div>
-     
+</noscript>
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '369713409881744');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=369713409881744&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+	<div class="top-login-container">
+			<div class="login-container">
+			<form name="frmLogin" method='POST' action='./process_login.jsp'>
+			<label>User Name</label> <input type="text" name="custid" id="custid" class="login-feild" />
+			<label>Password</label> <input type="password" name="custpwd" id="custpwd" class="login-feild"/>
+			<input type="submit" class="submit-feild" value="Submit" name='btnsubmit' onclick="return checklogin();" />
+			<a class="fancybox-iframe" href="./forgot-password/"><label>Forgot Password</label></a>&nbsp;&nbsp;
+			<a class="fancybox-iframe" href="./UserRegistration.jsp"><label>Create New Account</label></a>&nbsp;&nbsp;
+			<a href='./partnerlogin/index.jsp'><label>Vendor Login</label></a>
+
+			<div class="login-toggle" onclick="showLogin()" data-status="0">
+					Close
+			</div>
+			</form>
+			</div>
+	</div>
+	
+	<!-- <div class="right-floating-container">
+        	<div class="quick-links-button1">
+			<span class="quick-links-head1"><a  href="/contact-us/partner-with-us/">Partner with maalbhaada</a></span>
+		</div>
+	</div> -->
+
+	<script>
+function m1fuction() {
+var x1 = document.getElementById("my1div");
+if (x1.style.display === "none") {
+x1.style.display = "block";
+} else {
+x1.style.display = "none";
+}
+}
+
+function m2fuction() {
+var x1 = document.getElementById("my1di2v");
+if (x1.style.display === "none") {
+x1.style.display = "block";
+} else {
+x1.style.display = "none";
+}
+}
+</script>
+
+<script type="text/javascript"> 
+        $(document).mouseup(function (e) { 
+            if ($(e.target).closest(".closerhs1").length 
+                        === 0) { 
+                $(".closerhs1").hide(); 
+            } 
+        }); 
+    </script> 
+
+	<div class="right-floating-container">
+        	<div class="quick-links-button1">
+				<!-- <span class="quick-links-head1"><a  href="./contact-us/partner-with-us/">Partner with maalbhaada</a></span> -->
+			
+			<span class="quick-links-head1">
+			<a onclick="m1fuction()">
+			<span><img class="right-icons2" src="./wp-content/themes/maalbhaada/images/phone01.png" alt=""></span>
+			<br>
+			<span class="mobitext" style="color: #000">Toll-free <br> Number</span></a>
+			<br>
+			<span><hr style="height:0.5px;width:18px;color:#fff;"></span>
+			<a onclick="m2fuction()" style="color: #000">
+			<span><img class="right-icons2" src="./wp-content/themes/maalbhaada/images/chain01.png" alt=""></span>
+			 <span class="mobitext">Quick <br> Links</span></a>
+			 <br>
+			 <span><img class="right-icons2" src="./wp-content/themes/maalbhaada/images/polygone.png" alt=""></span>
+			<br>
+			<span><hr style="height:0.5px;width:18px;color:#fff;"></span>
+			<span> 
+			<a href="javascript:$zopim.livechat.window.show();">
+			<img class="right-icons3" src="./wp-content/themes/maalbhaada/images/chat01.png" alt="">
+			</a>	
+		</span>
+			<span style="color: #000">Chat</span>
+			</span>
+
+			
+		</div>
+	</div>
+
+	<div class="right-floating-container closerhs1" id="my1div" style="display: none;">
+        	<div class="quick-links-button2">
+			<a href="tel:18601234284" style="text-decoration:none;color:#fff;">
+			<span class="quick-links-head2">
+			Call us: <br> 1860-123-4284 <br> <span class="dailinggpick"> (call for Dailing  picking - <br> from India)</span>
+			</span></a>
+
+			
+		</div>
+	</div>
+
+	<div class="right-floating-container closerhs1" id="my1di2v" style="display: none;">
+        	<div class="quick-links-button3">
+			
+			<span class="quick-links-head3">
+			<span><a style="color: #fff;text-decoration:none;margin-bottom:5px;" href="./download-gst-invoice/">Download GST <br> Invoice</a></span>
+			<br>
+			<span><hr style="width: 80%;margin:5px;"></span>
+			<span><a style="color: #fff;text-decoration:none;margin-bottom:5px;" href="./logistics-business-enquiry/">Business Query</a></span>
+			<br>
+			<span><hr style="width: 80%;margin:5px;"></span>
+			<span><a style="color: #fff;text-decoration:none;margin-bottom:5px;" href="./contact-us/partner-with-us/">Partner with maalbhaada</a> </span>
+			<br>
+			<span><hr style="width: 80%;margin:5px;"></span>
+			<span><a style="color: #fff;text-decoration:none;" href="./track-by-docket">Track your Dockets</a></span>
+			<br>
+			<span><hr style="width: 80%;margin:5px;"></span>
+			<span><a style="color: #fff;text-decoration:none;" href="./courier-pickup-request/">Pick Up Request</a></span>
+			</span>
+			<br>
+			<span><hr style="width: 80%;margin:5px;"></span>
+			<span><a style="color: #fff;text-decoration:none;" href="./shipping-cost-calculator/">Product & Rate <br> Finder</a></span>
+			</span>
+
+			
+		</div>
+	</div>
+
+	<div class="wrapper">
+    <div>
+
+    
+    <header>
+    	<div class="container header_cont">
+         <div class="logo new-logo">
+          <a href="."><img src="./wp-content/themes/maalbhaada/images/logo.png" alt="Express Distribution & Supply Chain Solutions"  title="maalbhaada" /></a>
+		</div>
+		<!--
+		<div class="login-toggle12 business-tab1"><a href="./courier-pickup-request/" style="color:#fff;">Pickup Request 2</a></div>
+		<div class="login-toggle1 business-tab"><a href="./logistics-business-enquiry/" style="color:#fff;">Business Query</a></div>
+	    -->
+		
+
+		<div class="navimaalbhaadaon">
+				
+		<div class="social-icons">
+			<div class="social-icon2s">
+			<a href="https://www.facebook.com/maalbhaadalimited?fref=ts" class=""><img src="./wp-content/themes/maalbhaada/images/social01.png" alt=""></a>
+			<a href="https://mobile.twitter.com/maalbhaadaKWEIndia" class=""><img src="./wp-content/themes/maalbhaada/images/social02.png" alt=""></a>
+			<a href="https://www.linkedin.com/company/maalbhaada-limited" class=""><img src="./wp-content/themes/maalbhaada/images/social03.png" alt=""></a>
+			<a href="https://www.youtube.com/channel/UCYo7slFSRC9AWWw7becHTIw/featured?view_as=subscriber" class=""><img src="./wp-content/themes/maalbhaada/images/social04.png" alt=""></a>
+			<a style="padding-left: 5px;"><span style="border:1px solid #1566a2;"></span></a>
+			<a href="https://play.google.com/store/apps/details?id=com.maalbhaada.maalbhaadaconsumer&hl=en" class=""><img src="./wp-content/themes/maalbhaada/images/social05.png" alt=""></a>
+			<a href="https://apps.apple.com/au/app/maalbhaadaconsumer/id995166307" class=""><img src="./wp-content/themes/maalbhaada/images/social06.png" alt=""></a>
+			
+			</div>
+
+		</div>
+
+		<ul class="new-mwnu2">
+				<li><a href='./about-us/maalbhaada-profile/'>About us</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						<li><a href='./about-us/maalbhaada-profile/'>maalbhaada Profile</a></li> 
+						<li><a href='./about-us/kwe-about-us/'>maalbhaada-KWE</a>
+						<ul class='sub-menu-left'>
+						<li><a href='./about-us/kwe-about-us/'>About Us</a></li>
+						<li><a href='./about-us/maalbhaada-kwe-management/maalbhaadakwe-board-of-directors/'>Board of Directors</a></li>
+						</ul> 
+						<li><a href='./about-us/vision-and-values/'>Vision and values</a> </li> 
+						<li><a href='./about-us/founder-ceos-message/'>Founder & CEOs Message</a></li> 
+						<li><a href='./about-us/maalbhaada-profile/'>Management</a>
+						<ul class='sub-menu-right6'>
+						<li><a href='./about-us/management/bod/'>Board of Directors</a></li>
+						<li><a href='./about-us/management/leadership-team/'>Leadership Team</a></li>
+						</ul>
+
+						<li><a href='./about-us/milestones/'>Milestones</a></li> 
+						<li><a href='./about-us/awards-recognitions/'>Awards & Recognitions</a></li> 
+						<li><a href='./about-us/maalbhaada-history/'>maalbhaada history</a></li>
+						<li><a href='./about-us/corporate-video/'>Corporate video</a></li> 
+						</ul>
+						</li><li><a href='./about-us/maalbhaada-profile/'>Services</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						 <li><a href='https://www.maalbhaadakwe.com/our-services/express-distribution/'>maalbhaada-KWE Express Distribution</a></li> 
+					  	
+					  	<li><a href='#'>maalbhaada-KWE Special Services</a>
+						<ul class='sub-menu-left7'>
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/laabh/'>Laabh</a></li>
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/desk-desk-cargo/'>Desk to Desk</a></li>
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/premium-flexilite/'>Premium Flexilite</a></li>
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/student-express/'>Student Express</a></li>
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/art-express/'>Art Express</a></li>
+						
+						<li><a href='https://www.maalbhaadakwe.com/our-services/special-services/bike-express/'>Bike Express</a></li>
+						</ul>
+						</li>
+						
+						<li><a href='https://www.maalbhaadakwe.com/our-services/warehousing-solutions/'>maalbhaada-KWE SCM-Warehousing Solutions</a> </li> 
+						<li><a href='https://www.maalbhaadakwe.com/our-services/transportation-services/'>maalbhaada-KWE Transportation Services</a></li>
+
+						<li><a href='./ecommerce-logistics-shipping/'>E-commerce</a></li>
+						<li><a href='./efulfilment-3pl-logistics/'>MVAT</a></li> 
+						<li><a href='./cold-chain-storage-transport-solutions/'>Cold Chain Solutions</a></li> 
+						<li><a href='./trading-inventory-management/'>Trading Solutions</a></li>
+						<li><a href='./logistics-supply-chain-solutions/'>End-to-End Logistics</a></li> 
+						<li><a href='./international-freight-forwarding/'>Freight Forwarding</a></li>
+                        <li><a href='https://www.maalbhaadakwe.com/our-services/gst-solutions/'>GST Solutions </a></li>
+                        
+						</ul>
+						</li><li><a href='./tools/'>Tools</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						<li><a href='./shipping-cost-calculator/'>Rate & Transit Time Calculator</a></li> 
+						<li><a href='./pdf/ESS_matrix.pdf'>ESS Matrix</a> </li> 
+						<li><a href='./pdf/DocumentsRequired.pdf'>Documents Required</a></li>
+						<li><a href='./pdf/Retail-04-08-2017.pdf' target='_blank'>Terms and Conditions</a></li> 
+						
+						<li><a href='./convert-weightvolume/'>Convert Weight/Volume</a></li>
+						<li><a href='./tools/view-fuel-diesel-surcharge/'>Fuel & Diesel Surcharge</a></li> 
+						<li><a href='./pdf/ODA_Website.pdf' target='_blank'>ODA Locations</a></li>
+                        
+						 <li><a href='./tools/locate-us/'>Locate Us</a></li> 
+						 <li><a href='./claims-process/'>Claims Process</a></li>
+						 <li><a href='./download-gst-invoice'>Download GST Invoice</a></li>
+                          						 
+						</ul>
+						</li><li><a href='./investor-relations/'>Investor Relations</a>
+						<ul class='menu-clm2 new-mwnu24'> 
+						<li><a href='./investor-relations/'>maalbhaada Corporate Profile</a></li> 
+						<li><a href='.'>Board of Directors </a>
+						<ul class='sub-menu-left06'>
+						<li><a href='./investor-relations/bodkeymanagerial/'>Board of Directors and Key Managerial Personnel</a></li>
+						<li><a href='./investor-relations/committees-of-the-board/'>Committees of the Board</a></li>
+						<li><a href='./wp-content/uploads/2015/12/T&C%20for%20Independent%20Directors.pdf'>T&C of Appointment of Independent Directors</a></li>
+						<li><a href='./investor-relations/code-of-conduct/'>Code of Conduct</a></li>
+						<li><a href='./investor-relations/familiarization-programmes/'>Familiarization Programmes</a></li>
+						</ul>
+						</li> 
+						<li><a href='./investor-relations/policies/'>Policies</a></li> 
+						<li><a href='./about-us/maalbhaada-profile/'>Disclosures</a>
+						<ul class='sub-menu-left3'>
+						<li><a href='./investor-relations/notices/'>Notices</a></li>
+						<li><a href='./investor-relations/outcomes/'>Outcomes</a>
+						<ul>
+						<li><a href='#'>Results</a>
+						<li><a href='./investor-relations/quarterly-report/'>Quarterly Report</a>
+						</li>
+						</ul>
+						</li>
+						<li><a href='./investor-relations/annual-report/'>Annual Report</a></li>
+						<li><a href='./investor-relations/subsidiaries-annual-report/'>Subsidiaries Annual Report</a></li>
+						<li><a href='./investor-relations/shareholding-pattern/'>Shareholding Pattern</a></li>
+						<li><a href='./investor-relations/concall-transcripts/'>Concall Transcripts</a></li>
+						<li><a href='./pdf/Investors-Presentation-FinalV1.pdf'>Investor Presentation</a></li>
+						<li><a href='./investor-relations/unclaimed-dividend-details/'>Unclaimed Dividend</a></li>
+						<li><a href='./investor-relations/general/'>General</a></li>
+						</ul>
+						
+						
+						</li>
+						<li><a href='./investor-relations/chairman-speeches/'>Chairman Speech</a></li> 
+						<li><a href='./about-us/maalbhaada-profile/'>Investor Details</a>
+						<ul class='sub-menu-right3'> 
+					<li><a href='.//wp-content/uploads/2019/09/maalbhaada-fixed-deposit-form-2019-1.pdf'>FD Schemes</a></li> 
+						<li><a href='./investor-relations/listing-information'>Listing Information</a> </li> 
+						<li><a href='./investor-relations/shareholder-registration-form/'>Shareholder Registration Form</a></li>
+						<li><a href='./investor-relations/investor-feedback/'>Investor Feedback</a></li> 
+						<li><a href='./wp-content/uploads/2018/10/Transfer-of-Shares-in-Demat-Form.pdf'>Demat</a></li>
+						<li><a href='./investor-relations/contact-us/'>Contact Us</a></li> 
+												 
+						</ul>
+						
+						
+						</li>
+						<li><a href='./investor-relations/announcements/'>Announcements</a></li> 
+						<li><a href='./investor-relations/analyst-coverage/'>Investor Analyst Coverage</a></li> 
+						</ul>
+						
+						</li><li><a href='./csr/'>CSR</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						<li><a href='./csr/'>Corporate Social Responsibility</a></li> 
+						<li><a href='./wp-content/uploads/2020/02/maalbhaada-CSR-Policy.pdf'>maalbhaada CSR Policy </a></li> 
+					
+						</ul>
+						
+						
+						</li><li><a href='./careers/working-with-maalbhaada'>Careers</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						<li><a href='#'>We at maalbhaada</a>
+						<ul class='sub-menu-left4'>
+						<li><a href='./careers/working-with-maalbhaada/'>Working with maalbhaada</a></li>
+						<li><a href='./careers/work-culture/'>Work Culture</a></li>
+						<li><a href='./careers/talent-development/'>Talent Development</a></li>
+						</ul>
+						</li> 
+						<li><a href='#'>Partner Center </a>
+						<ul class='sub-menu-left5'>
+						<li><a href='./careers/partner-center/become-a-ga/'>Become a GA</a></li>
+						<li><a href='./careers/partner-center/vendor-registration/'>Vendor Registration</a></li>
+						<li><a href='./careers/partner-center/maalbhaada-convenience-center/'>maalbhaada Customer Convenience Center - Franchise</a></li>
+						</ul>
+						</li>
+
+						<li><a href='./careers/hr-philosophy/'>HR Philosophy </a></li>
+					 
+						<li><a href='./careers/career-toolkit/'>Career Toolkit </a></li> 
+						
+						<li><a href='./careers/job-faqs/'>Job Faqs</a> </li> 
+                          <li><a href='https://hrms.maalbhaada.net:8091/Login.aspx' target='_blank'>Vendor Portal</a> </li> 
+						 <li><a href='https://hrms.maalbhaada.net:8091/candidates/candidates_home.aspx?rms=candidatelist' target='_blank'>Candidate Portal</a> </li> 
+						<li><a href='./careers/current-openings/' >Current Openings</a> </li> 
+						</ul>
+						
+						</li><li><a href='./media-center/press-releases'>Media Center</a>
+							<ul class='menu-clm2 new-mwnu25'> 
+						<li><a href='./media-center/press-releases/'>Press Releases</a></li> 
+
+						<li><a href='#'>Press Kit</a>
+						<ul class='sub-menu-left6'>
+						<li><a href='./about-us/maalbhaada-profile/'>maalbhaada Corporate Profile</a></li>
+						<li><a href='./media-center/maalbhaada-logo/'>maalbhaada Logo</a></li>
+						</ul>
+						</li> 
+
+
+						<li><a href='./media-center/press-coverages/'>Press Coverages</a></li> 
+						
+						<li><a href='./media-center/maalbhaada-quick-facts/'>maalbhaada Quick Facts</a></li> 
+						<li><a href='./media-center/media-contacts/'>Media Contacts</a></li> 
+						<li><a href='./media-center/events/'>Events</a></li> 
+						</ul>
+						
+						
+						
+						</li><li><a href='./contact-details/'>Contact us</a>
+						<ul class='menu-clm2 new-mwnu25'> 
+						<li class='widthcontact'><a href='./contact-us/contact-details/'>Contact Details</a></li> 
+						 
+						<li class='widthcontact'><a href='./courier-pickup-request/'>Pickup Request</a></li>
+						<li class='widthcontact'><a href='./logistics-business-enquiry/'>Business Query</a></li> 						
+						<li class='widthcontact'><a href='./contact-us/feedback/' >Feedback</a></li>
+						<li class='widthcontact'><a href='./contact-us/customer-care/' >Customer Care</a></li> 
+						<li class='widthcontact'><a href='./contact-us/faqs/'>FAQs</a></li> 
+						<li class='widthcontact'><a href='./contact-us/service-complaint/' >Service Complaint</a></li>
+						<li class='widthcontact'><a href='./contact-us/status-of-complaint/' >Status of Complaint</a></li> 
+						<li class='widthcontact'><a href='./wp-content/uploads/2017/12/TAPA.pdf'>TAPA certified warehouses </a></li> 
+						<li class='widthcontact'><a href='./contact-us/partner-with-us/'>Partner With Us </a></li> 
+						</ul>
+						
+						
+						</li>			
+			<li><a href="https://blog.maalbhaada.com/" target="_blank">Blog</a></li>
+
+
+
+			<li class="login-toggle-1" onclick="showLogin()" data-status="0" ><a><img src="./wp-content/themes/maalbhaada/images/login01.png" alt="Login" title="Login" /><span style="color:#3fafc4;"> Login</span></a></li>					
+            <!-- <li><form role="search" method="get" class="search-form" action="./">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit screen-reader-text" value="Search" />
+			</form></li> -->
+          </ul>
+
+
+
+		</div>
+
+	
+
+
+		<div class="mobile-navimaalbhaadaon">
+			
+			<div class="mobile-call">
+				<span class="visible-xs">
+					<div class="mobile-call-item-left">
+						<!-- <a href="tel:18601234284"><i class="fa fa-2x fa-phone-square" aria-hidden="true"></i></a> -->
+					<img class="loginmobile3" src="./wp-content/themes/maalbhaada/images/login01.png" alt="Login" title="Login" />
+					</div> 
+					<div class="mobile-call-item-right">
+						<!-- <span class="mob-call-text">Call for Pickup <br>(Dialing from India only) </span> -->
+						<span class="mob-call-text" style="font-size: 21px;"> 
+						<span class="login-toggle-1" onclick="showLogin()" data-status="0" >
+						<a>
+						<span class="login-mobile2"> Login</span></a></span> </span>
+					</div> 
+				</span>
+			</div>
+			<!-- <span class="mobile-search-icon"><a href="#track-your-parcel"><img src="./wp-content/themes/maalbhaada/images/search-icon.png" alt="Search" title="Search" width="34" style="vertical-align:super;" /></a></span> -->
+
+			
+			<span class="mobile-menu-icon"><img src="./wp-content/themes/maalbhaada/images/menu-icon.png" alt="Mobile Menu" title="Mobile Menu" /></span>
+			<div class="mobile-menu-container"><ul id="menu-mobile-menu" class="menu"><li id="menu-item-5199" class="mobile-menu-item menu-item menu-item-type-custom menu-item-object-custom menu-item-5199"><a href="tel:1860-123-4284"><b>1860-123-4284</b><br><i class="" aria-hidden="true"><small style="font-size:10px;"> (Call for pickup &#8211; Dialing from India Only)</small></i></a></li>
+<li id="menu-item-1400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1400"><a title="About us" href="#">About us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1399"><a title="maalbhaada Profile" href="./about-us/maalbhaada-profile/">maalbhaada Profile</a></li>
+	<li id="menu-item-5691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5691"><a href="#">maalbhaada-KWE</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5692" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5692"><a href="./about-us/kwe-about-us/">About Us</a></li>
+		<li id="menu-item-5693" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5693"><a href="./about-us/maalbhaada-kwe-management/maalbhaadakwe-board-of-directors/">Board of Director</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1402"><a title="Vision and values" href="./about-us/vision-and-values/">Vision and values</a></li>
+	<li id="menu-item-1397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1397"><a title="Founder &#038; CEO&#8217;s Message" href="./about-us/founder-ceos-message/">Founder &#038; CEO&#8217;s Message</a></li>
+	<li id="menu-item-1411" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1411"><a title="Management" href="./about-us/management/bod/">Management</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5694" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5694"><a href="./about-us/management/bod/">Board of Directors</a></li>
+		<li id="menu-item-5695" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5695"><a href="./about-us/management/leadership-team/">Leadership Team</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1401"><a title="Milestones" href="./about-us/milestones/">Milestones</a></li>
+	<li id="menu-item-1395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1395"><a title="Awards &#038; Recognitions" href="./about-us/awards-recognitions/">Awards &#038; Recognitions</a></li>
+	<li id="menu-item-1398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1398"><a title="maalbhaada history" href="./about-us/maalbhaada-history/">maalbhaada history</a></li>
+	<li id="menu-item-1396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1396"><a title="Corporate video" href="./about-us/corporate-video/">Corporate video</a></li>
+</ul>
+</li>
+<li id="menu-item-4925" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-4925"><a href="#">Tools</a>
+<ul class="sub-menu">
+	<li id="menu-item-5675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5675"><a href="./shipping-cost-calculator/">Rate &#038; Transit Time Calculator</a></li>
+	<li id="menu-item-5676" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5676"><a href="./pdf/ESS_matrix.pdf">ESS Matrix</a></li>
+	<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5677"><a href="./pdf/DocumentsRequired.pdf">Documents Required</a></li>
+	<li id="menu-item-5678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5678"><a href="./pdf/Retail-04-08-2017.pdf">Term &#038; Condition</a></li>
+	<li id="menu-item-1657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1657"><a title="Locate Us" href="./tools/locate-us/">Locate Us</a></li>
+	<li id="menu-item-3119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3119"><a href="./tools/view-fuel-diesel-surcharge/">View Fuel &#038; Diesel Surcharge</a></li>
+	<li id="menu-item-3118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3118"><a href="./tools/convert-weightvolume/">Convert Weight/Volume</a></li>
+	<li id="menu-item-3120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3120"><a href="./tools/transit-time-calculator/">Transit Time Calculator</a></li>
+	<li id="menu-item-5682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5682"><a href="./claims-process/">Claims</a></li>
+	<li id="menu-item-5680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5680"><a href="./download-gst-invoice/">Download Gst Invoice</a></li>
+</ul>
+</li>
+<li id="menu-item-3950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3950"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-3957" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3957"><a href="./express-distribution-air-road-rail-transportation/">Express Distribution</a></li>
+	<li id="menu-item-3952" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3952"><a href="#">Special Services</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5696" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5696"><a href="https://www.maalbhaadakwe.com/our-services/special-services/laabh/">Laadha</a></li>
+		<li id="menu-item-5697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5697"><a href="https://www.maalbhaadakwe.com/our-services/special-services/desk-desk-cargo/">Desk To Desk</a></li>
+		<li id="menu-item-5698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5698"><a href="https://www.maalbhaadakwe.com/our-services/special-services/desk-desk-cargo/">Premium Flexilite</a></li>
+		<li id="menu-item-5699" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5699"><a href="https://www.maalbhaadakwe.com/our-services/special-services/student-express/">Student Express</a></li>
+		<li id="menu-item-5700" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5700"><a href="https://www.maalbhaadakwe.com/our-services/special-services/art-express/">Art Express</a></li>
+		<li id="menu-item-5702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5702"><a href="https://www.maalbhaadakwe.com/our-services/special-services/bike-express/">Bike Express</a></li>
+	</ul>
+</li>
+	<li id="menu-item-3961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3961"><a href="./supply-chain-logistics-solutions/">Supply Chain Solutions</a></li>
+	<li id="menu-item-5674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5674"><a href="./ecommerce-logistics-shipping/">E-commerce</a></li>
+	<li id="menu-item-3962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3962"><a href="./efulfilment-3pl-logistics/">MVAT</a></li>
+	<li id="menu-item-3963" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3963"><a href="./cold-chain-storage-transport-solutions/">Cold Chain Solutions</a></li>
+	<li id="menu-item-3967" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3967"><a href="./trading-inventory-management/">Trading Solutions</a></li>
+	<li id="menu-item-3964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3964"><a href="./logistics-supply-chain-solutions/">maalbhaada – Leading End to End Logistics Solutions in India</a></li>
+	<li id="menu-item-3966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3966"><a href="./international-freight-forwarding/">International Services</a></li>
+	<li id="menu-item-5681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5681"><a href="./international-freight-forwarding/">Freight Forwarding</a></li>
+	<li id="menu-item-3965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3965"><a href="./gst/">GST</a></li>
+</ul>
+</li>
+<li id="menu-item-1418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1418"><a title="Investor Relations" href="#">Investor Relations</a>
+<ul class="sub-menu">
+	<li id="menu-item-5683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5683"><a href="./investor-relations/">maalbhaada Corporate Profile</a></li>
+	<li id="menu-item-5684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5684"><a href="./investor-relations/bodkeymanagerial/">Board of Directors</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5712" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5712"><a href="./investor-relations/bodkeymanagerial/">Board of Directors and Key Managerial Personnel</a></li>
+		<li id="menu-item-5713" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5713"><a href="./investor-relations/committees-of-the-board/">Committees of the Board</a></li>
+		<li id="menu-item-5714" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5714"><a href="./wp-content/uploads/2015/12/T&#038;C%20for%20Independent%20Directors.pdf">T&#038;C of Appointment of Independent Directors</a></li>
+		<li id="menu-item-5715" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5715"><a href="./investor-relations/code-of-conduct/">Code of Conduct</a></li>
+		<li id="menu-item-5716" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5716"><a href="./investor-relations/familiarization-programmes/">Familiarization Programmes</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5685"><a href="./investor-relations/policies/">Policies</a></li>
+	<li id="menu-item-5686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5686"><a href="./investor-relations/notices/">Disclosures</a></li>
+	<li id="menu-item-5687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5687"><a href="./investor-relations/chairman-speeches/">Chairman Speeches</a></li>
+	<li id="menu-item-5688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5688"><a href="./investor-relations/listing-information/">Inverter Details</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5717" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5717"><a href="./wp-content/uploads/2019/09/maalbhaada-fixed-deposit-form-2019-1.pdf">FD Schemes</a></li>
+		<li id="menu-item-5718" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5718"><a href="./investor-relations/listing-information/">Listing Information</a></li>
+		<li id="menu-item-5719" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5719"><a href="./investor-relations/shareholder-registration-form/">Shareholder Registration Form</a></li>
+		<li id="menu-item-5720" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5720"><a href="./investor-relations/investor-feedback/">Investor Feedback</a></li>
+		<li id="menu-item-5721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5721"><a href="./wp-content/uploads/2018/10/Transfer-of-Shares-in-Demat-Form.pdf">Demat</a></li>
+		<li id="menu-item-5722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5722"><a href="./investor-relations/contact-us/">Contact Us</a></li>
+	</ul>
+</li>
+	<li id="menu-item-5689" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5689"><a href="./investor-relations/announcements/">Announcements</a></li>
+	<li id="menu-item-5690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5690"><a href="./investor-relations/analyst-coverage/">Investor Analyst Coverage</a></li>
+</ul>
+</li>
+<li id="menu-item-1458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1458"><a href="#">CSR</a>
+<ul class="sub-menu">
+	<li id="menu-item-1457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1457"><a title="Corporate Social Responsibility" href="./csr/">Corporate Social Responsibility</a></li>
+	<li id="menu-item-1459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1459"><a title="maalbhaada CSR Policy" href="./wp-content/uploads/2020/02/maalbhaada-CSR-Policy.pdf">maalbhaada CSR Policy</a></li>
+</ul>
+</li>
+<li id="menu-item-1460" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1460"><a title="Careers" href="#">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-1462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1462"><a title="We at maalbhaada" href="#">We at maalbhaada</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5723" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5723"><a href="./careers/working-with-maalbhaada/">Working with maalbhaada</a></li>
+		<li id="menu-item-5724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5724"><a href="./careers/work-culture/">Work Culture</a></li>
+		<li id="menu-item-5725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5725"><a href="./careers/talent-development/">Talent Development</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1465"><a title="HR Philosophy" href="./careers/hr-philosophy/">HR Philosophy</a></li>
+	<li id="menu-item-1469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1469"><a title="Career Toolkit" href="./careers/career-toolkit/">Career Toolkit</a></li>
+	<li id="menu-item-1470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1470"><a title="Partner Center" href="#">Partner Center</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5726"><a href="./careers/partner-center/become-a-ga/">Become a GA</a></li>
+		<li id="menu-item-5727" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5727"><a href="./careers/partner-center/vendor-registration/">Vendor Registration</a></li>
+		<li id="menu-item-5728" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5728"><a href="./careers/partner-center/maalbhaada-convenience-center/">maalbhaada Customer Convenience Center &#8211; Franchise</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1474"><a title="JOB FAQs" href="./careers/job-faqs/">JOB FAQs</a></li>
+	<li id="menu-item-2413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2413"><a title="Vendor Portal" href="https://hrms.maalbhaada.net:8091/Login.aspx">Vendor Portal</a></li>
+	<li id="menu-item-3638" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3638"><a href="./careers/current-openings/">Current Openings</a></li>
+</ul>
+</li>
+<li id="menu-item-1476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1476"><a title="Media Center" href="#">Media Center</a>
+<ul class="sub-menu">
+	<li id="menu-item-1477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1477"><a title="Press Releases" href="./media-center/press-releases/">Press Releases</a></li>
+	<li id="menu-item-1478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1478"><a title="Press Coverages" href="./media-center/press-coverages/">Press Coverages</a></li>
+	<li id="menu-item-1479" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1479"><a title="Press kit" href="#">Press kit</a>
+	<ul class="sub-menu">
+		<li id="menu-item-5729" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5729"><a href="./about-us/maalbhaada-profile/">maalbhaada Corporate Profile</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1482"><a title="maalbhaada Quick Facts" href="./media-center/maalbhaada-quick-facts/">maalbhaada Quick Facts</a></li>
+	<li id="menu-item-1483" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1483"><a title="Media Contacts" href="./media-center/media-contacts/">Media Contacts</a></li>
+	<li id="menu-item-5730" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5730"><a href="./media-center/maalbhaada-logo/">maalbhaada Logo</a></li>
+</ul>
+</li>
+<li id="menu-item-1680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1680"><a title="Blog" href="https://blog.maalbhaada.com/">Blog</a></li>
+<li id="menu-item-1484" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1484"><a title="Contact us" href="#">Contact us</a>
+<ul class="sub-menu">
+	<li id="menu-item-1486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1486"><a title="Contact Details" href="./contact-us/contact-details/">Contact Details</a></li>
+	<li id="menu-item-1664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1664"><a title="Feedback" href="./GFeedback.jsp">Feedback</a></li>
+	<li id="menu-item-1658" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1658"><a title="Pickup Request" href="./online-pickup-request/">Pickup Request</a></li>
+	<li id="menu-item-1489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1489"><a title="Customer care" href="./contact-us/customer-care/">Customer care</a></li>
+	<li id="menu-item-1490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1490"><a title="FAQs" href="./contact-us/faqs/">FAQs</a></li>
+</ul>
+</li>
+</ul></div>			
+		</div>
+		 </div>
+      </header>
+ 
+       <div class="clear"></div>
+
+	<div id="content" class="main-container">
+<style type="text/css">
+	.getb{
+		margin-bottom: 4%;
+		margin-top: 4%;
+	}
+	.getb.top{
+		margin-top: 2%;
+		margin-bottom: 6%;
+	}
+	.getb .getlink.left {
+	   margin: 0;
+    width: 100%;
+    background: #f59e00;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 2px #000;
+	}
+
+
+	.fdesc {
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: normal;
+    padding-bottom: 5%;
+}
+
+.radiostyle span{
+	letter-spacing: 1px;
+    font-size: 18px;
+    line-height: normal;
+}
+
+
+
+/* Clear floats after the columns */
+.r12w:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bx-wrapper .testimonials-carousel-content p {
+    text-align: left;
+}
+
+.bx-wrapper .testimonials-name {
+    text-align: left;
+}
+
+.bx-wrapper span {
+    margin-left: 0px;
+}
+
+.ahead-box-grid1 {
+    width: 90%;
+    padding: 4%;
+    background: rgb(78,160,193);
+    margin-top: none;
+    margin: 0 auto;
+}
+
+.find_loc{
+	padding: 20px;
+}
+
+
+
+.ahead-box-grid {
+    padding-top: 0;
+}
+
+.ahead-box-height{
+	height: 290px;
+}
+
+.fhead {
+    color: rgb(255, 255, 255);
+	font-weight: 600;
+	font-size: 21px;
+	padding: 4.5% 0px 7% 0px;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+
+.sy-pager {
+    top: 90% !important;
+	text-align: center !important;
+	left: unset;
+}
+
+
+.slider-text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 150;
+  left: 6%;
+  bottom: 25px;
+  text-align: center;
+}
+
+.grid-hover-effect{
+    bottom: -85%;
+	color:#000;
+    background: rgb(255, 255, 255) !important;
+    padding-top: 7% !important;
+}
+
+.grid-hover-effect-text a {
+    color: #000 !important;
+}
+
+.html5lightbox{
+	color: #ffffff;
+}
+
+
+
+
+
+</style>
+
+<script>
+
+
+$(document).ready(function(){
+	
+	
+	 var form = $('form[name="status1"]'),
+        radio = $('input[name="status"]'),
+        choice = '';
+		var site_url ='.';
+	
+    radio.change(function(e) {
+        choice = this.value;
+		//alert(choice);
+        if (choice === 'status_ref') {
+            form.attr('action', site_url+'/track-by-reference');
+			$('#docket_id1').attr('name', 'reference_id');
+			$('#docket_id1').attr("placeholder", "Type the reference number");
+		
+			$('#useCmmas').hide();
+			
+			$('#recNameTr').show();
+        } else {
+            form.attr('action', site_url+'/track-by-docket');
+			$('#docket_id1').attr('name', 'docket_id');
+			 $('#docket_id1').attr("placeholder", "Type the docket number");
+			 $('#recNameTr').hide();
+			 $('#useCmmas').show();
+			 
+        }
+    });
+	
+	/* $.validator.addMethod("comma-rule", function(value){
+	    var n = value.split(",").length - 1;
+	    return (n <= 49);
+	}, "Only 49 commas allowed"); */
+
+	$.validator.addMethod("trackDockRule", function(value, element) {
+	   
+	     return this.optional(element) || /^[0-9\,\n\,]+$/i.test(value);
+
+	    }, "Use only numbers and comma. No Special characters, spaces, newline & alphabets are allowed.");
+		$("#status1").validate({
+		rules: {
+			//"docket_id"="comma-rule",
+			docket_id: {
+				required: true,
+				trackDockRule : true, 			
+				minlength:9,
+				maxlength:499
+			} ,  
+			reference_id : {
+				required: true,
+				//number:true,
+				minlength:2,
+				maxlength:12
+			} ,
+			recName: {
+				required:true,	
+				minlength:3,
+			},		
+		},
+		messages: {
+			docket_id: {
+				required: "Please enter docket number",
+				trackDockRule:"Use only numbers and comma.No Special characters, spaces,newline & alphabets are allowed",
+				minlength: "Need min 9 numbers",
+				maxlength: "Max 499 characters allowed"
+			},
+			reference_id: {
+				required: "Please enter reference no",
+				minlength:"Need min 2 numbers",
+				maxlength:"Need max 12 numbers",
+			},
+			recName: {
+				required:"Please enter receiver's name",	
+				minlength:"Min 3 characters needed",
+			},
+			//"docket_id":"Max 5 Docket Allowed"
+		}
+	});
+
+	/*$('input[name="docket_id"]').rules('add', {
+	    comma-rule: true
+	});*/
+
+	$('#track').on('click', function() {
+		$("#status1").validate();  
+	});
+	$('#track1').on('click', function() {
+		$("#status1").validate();  
+	});
+
+	/*for sms*/
+	$("#sms1").validate({
+		ignore: ".ignore",
+		rules: {
+			smsdocket: {
+				required: true,
+				number:true,
+				minlength:9,
+				maxlength:9
+			},
+			smsmobile: { 
+				required: true,
+				number:true,
+				minlength:10,
+				maxlength:10
+			},
+			hiddenRecaptcha: {
+			    required: function () {
+			        if (grecaptcha.getResponse() == '') {
+			            return true;
+			        } else {
+			            return false;
+			        }
+			    }
+			}
+		},
+		messages: {
+			smsdocket: {
+				required: "Please enter number",
+				number: "Only numbers allowed",
+				minlength:"Need min 9 numbers",
+				maxlength:"Max 9 numbers allowed"
+			},
+			smsmobile: { 
+				required: "Please enter number",
+				number: "Only numbers allowed",
+				minlength:"Min 10 numbers allowed",
+				maxlength:"Max 10 numbers allowed"
+			}
+		}
+	});
+/*for email*/
+
+
+$("#mail1").validate({
+	ignore: ".ignore",
+ rules: {
+     docket_num: {
+required: true,
+number:true,
+minlength:9,
+maxlength:9
+            },
+mail_tel: {
+required: true,
+number:true,
+minlength:10,
+maxlength:10
+            },
+mail_mob: {
+required: true,
+number:true,
+minlength:10,
+maxlength:10
+            },
+mail_email: { 
+required: true,
+email:true
+},
+hiddenRecaptcha: {
+    required: function () {
+        if (grecaptcha.getResponse() == '') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+},
+   messages: {
+     docket_num: {
+required: "Please enter Number",
+number: "enter valid Number",
+minlength:"Please enter Min 9 Numbers",
+maxlength:"Max 9 numbers Allowed"
+   },
+ mail_tel: {
+required: "Please enter telephone number",
+number: "enter valid number",
+minlength:"Please enter a valid Number",
+maxlength:"Max 10 numbers Allowed"
+   },
+ mail_mob: {
+required: "Please enter mobile number",
+number: "enter valid number",
+minlength:"Please enter a valid Number",
+maxlength:"Max 10 numbers Allowed"
+   },
+mail_email: { 
+required: "Please enter email id ",
+email: "enter valid email"
+}
+}
+});
+
+$('#tracksms').on('click', function() {
+ $("#sms1").validate(); 
+});
+
+
+
+$('#trackemail').on('click', function() {
+ $("#mail1").validate();
+});
+
+});
+</script>
+<script type="text/javascript" src="./wp-content/themes/maalbhaada/html5lightbox/html5lightbox.js"></script>
+
+		<script>
+			$(function() {
+				var demo1 = $("#demo1").slippry({
+					// transition: 'fade',
+					// useCSS: true,
+					// speed: 1000,
+					// pause: 3000,
+					// auto: true,
+					// preload: 'visible',
+					// autoHover: false
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#demo1").slippry();
+					return false;
+				});
+			});
+		</script>
+		
+		 <script>
+		 $(document).ready(function(){
+			 var windowSize = $(window).width();
+
+        if (windowSize <= 569) {
+			 $(function() {
+	
+				var demo2 = $("#demo2").slippry({
+					// transition: 'fade',
+					// useCSS: true,
+					// speed: 1000,
+					// pause: 3000,
+					// auto: true,
+					// preload: 'visible',
+					// autoHover: false
+				});
+
+				$('.stop').click(function () {
+					demo2.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo2.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo2.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo2.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo2.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo2.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo2 = $("#demo2").slippry();
+					return false;
+				});
+			});
+		}
+				});
+		</script> 
+<script>
+$(document).ready(function(){
+//$("error").css("margin", "0px 0px 0px;");
+$.validator.addMethod("comma-rule", function(value){
+    var n = value.split(",").length - 1;
+    return (n <= 4);
+}, "Only 5 commas allowed");
+
+
+$("#status1").validate({
+ rules: {
+//"docket_id"="comma-rule",
+     docket_id: {
+required: true,
+"comma-rule":true,
+number:true,
+minlength: function (){
+var opt1 = $('input[name=status]:checked', '#status1').val();
+if(opt1 == 'status_docket')
+{
+return 9;
+}
+else
+{
+return 2;
+}
+},
+
+maxlength: function (){
+var opt2 = $('input[name=status]:checked', '#status1').val();
+if(opt2 == 'status_docket')
+{
+return 9;
+}
+else
+{
+return 100;
+}
+}
+}   
+},
+   messages: {
+     docket_id: {
+required:  "Please enter number",
+"comma-rule":"Enter 5 numbers only",
+number: "enter valid number",
+minlength: function (){
+var opt1 = $('input[name=status]:checked', '#status1').val();
+if(opt1 == 'status_docket')
+{
+return "Min 9 numbers allowd";
+}
+else
+{
+return "Min 2 numbers allowd";
+}
+},
+
+maxlength:function (){
+var opt2 = $('input[name=status]:checked', '#status1').val();
+if(opt2 == 'status_docket')
+{
+return "Max 9 numbers allowd";
+}
+else
+{
+return "Max 100 numbers allowd";
+
+}
+}
+
+   }
+//"docket_id":"Max 5 Docket Allowed"
+}
+});
+
+
+    
+
+/*$('input[name="docket_id"]').rules('add', {
+    comma-rule: true
+});*/
+
+$('#track').on('click', function() {
+ $("#status1").validate();  // This is not working and is not validating the form
+});
+$('#track1').on('click', function() {
+ $("#status1").validate();  // This is not working and is not validating the form
+});
+
+/*for sms*/
+$("#sms1").validate({
+	ignore: ".ignore",
+ rules: {
+     smsdocket: {
+required: true,
+number:true,
+minlength:9,
+maxlength:9
+            },
+
+smsmobile: { 
+required: true,
+number:true,
+minlength:10,
+maxlength:10
+},
+hiddenRecaptcha: {
+    required: function () {
+        if (grecaptcha.getResponse() == '') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+},
+   messages: {
+     smsdocket: {
+required: "Please enter number",
+number: "Only Numbers allowed",
+minlength:"Need Min 9 Numbers",
+maxlength:"Max 9 numbers Allowed"
+   },
+smsmobile: { 
+required: "Please enter number",
+number: "Only Numbers allowed",
+minlength:"Enter a valid Number",
+maxlength:"Max 10 numbers Allowed"
+}
+}
+});
+
+$('#tracksms').on('click', function() {
+ $("#sms1").validate(); 
+});
+
+/*for email*/
+
+$("#mail1").validate({
+	ignore: ".ignore",
+ rules: {
+     docket_num: {
+required: true,
+number:true,
+minlength:9,
+maxlength:9
+            },
+mail_tel: {
+required: true,
+number:true,
+minlength:10,
+maxlength:10
+            },
+mail_mob: {
+required: true,
+number:true,
+minlength:10,
+maxlength:10
+            },
+mail_email: { 
+required: true,
+email:true
+},
+hiddenRecaptcha: {
+    required: function () {
+        if (grecaptcha.getResponse() == '') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+},
+   messages: {
+     docket_num: {
+required: "Please enter Number",
+number: "enter valid Number",
+minlength:"Please enter Min 9 Numbers",
+maxlength:"Max 9 numbers Allowed"
+   },
+ mail_tel: {
+required: "Please enter number",
+number: "enter valid number",
+minlength:"Please enter a valid Number",
+maxlength:"Max 10 numbers Allowed"
+   },
+ mail_mob: {
+required: "Please enter number",
+number: "enter valid number",
+minlength:"Please enter a valid Number",
+maxlength:"Max 10 numbers Allowed"
+   },
+mail_email: { 
+required: "Please enter number",
+email: "enter valid email"
+}
+}
+});
+
+$('#trackemail').on('click', function() {
+ $("#mail1").validate();
+});
+
+});
+</script>
+<div class="slideshow-container">
+	
+		<ul id="demo1">	
+
+									<li>
+
+						
+						<a href="https://www.maalbhaadakwe.com/our-services/express-distribution/">						
+							<img src="./wp-content/uploads/2020/09/maalbhaada-Lead-Gen-Auto-Banner-1366-x-438.jpg" alt="Auto">
+							<div class="slider-text2">
+							<button class="sliderbuttan2">
+														Learn More																					
+						
+						</button>	
+						</div>	
+					</a>
+					
+						<!-- <div class="slider-text2">
+						<div>
+						<button class="sliderbuttan2">Learn More</button>					
+						</div></div> -->
+						</li>
+						
+
+				   						<li>
+
+						
+						<a href="./">						
+							<img src="./wp-content/uploads/2020/09/maalbhaada-Air-Freight-Banner-640-×-298-1.jpg" alt="maalbhaada Air">
+							<div class="slider-text2">
+							<button class="sliderbuttan2">
+														Learn More																					
+						
+						</button>	
+						</div>	
+					</a>
+					
+						<!-- <div class="slider-text2">
+						<div>
+						<button class="sliderbuttan2">Learn More</button>					
+						</div></div> -->
+						</li>
+						
+
+				   						<li>
+
+						
+						<a href="https://www.maalbhaadakwe.com/our-services/express-distribution/">						
+							<img src="./wp-content/uploads/2020/08/maalbhaada-Ads-assets-3-Banner-1366-x-438.jpg" alt="We are with you">
+							<div class="slider-text2">
+							<button class="sliderbuttan2">
+														Learn More																					
+						
+						</button>	
+						</div>	
+					</a>
+					
+						<!-- <div class="slider-text2">
+						<div>
+						<button class="sliderbuttan2">Learn More</button>					
+						</div></div> -->
+						</li>
+						
+
+				   						<li>
+
+						
+						<a href="https://www.compassdigimag.com/">						
+							<img src="./wp-content/uploads/2020/08/Compass-Issue-September-Web-banner-maalbhaada-1366X438.jpg" alt="Compass September">
+							<div class="slider-text2">
+							<button class="sliderbuttan2">
+														Read More																					
+						
+						</button>	
+						</div>	
+					</a>
+					
+						<!-- <div class="slider-text2">
+						<div>
+						<button class="sliderbuttan2">Learn More</button>					
+						</div></div> -->
+						</li>
+						
+
+				   	
+				
+		</ul>
+
+		<ul id="demo2">
+			<li>
+			<a href="#" target="_blank"><img src="./wp-content/uploads/2019/08/maalbhaada-banner_size_6a.png" alt="maalbhaada Excess Baggage"></a>
+			
+			<div class="slider-text3">
+			<a href="https://www.maalbhaadakwe.com/our-services/express-distribution/">
+			<button class="sliderbuttan3">Learn More</button>
+			</a>
+			</div>
+			
+			</li>
+			<!-- <li><a href="#" target="_blank"><img src="https://maalbhaadauat.maalbhaada.com/wp-content/uploads/2019/08/maalbhaada-banner_size_7a.png" alt="maalbhaada Excess Baggage"></a></li> -->
+			<li><a href="#" target="_blank"><img src="./wp-content/uploads/2020/03/maalbhaada-banner_size_8a-2.png" alt="maalbhaada Excess Baggage"></a>
+		
+			<div class="slider-text3">
+			<a href="./international-freight-forwarding/">
+			<button class="sliderbuttan3">Learn More</button>
+			</a>
+			</div>
+			</li>
+			<!-- <li><a href="./contact-us/partner-with-us/" target="_blank"><img src="./wp-content/uploads/2019/08/Channel-Partnership_Mobile-640x298.jpg" alt="Channel Partnership"></a></li>
+		    <li><a href="#" target="_blank"><img src="./wp-content/uploads/2019/08/maalbhaada-Update-28-Mobile.jpg" alt="First ATM at Kedarnath"></a></li>			
+			<li><a href="http://onelink.to/hracna" target="_blank"><img src="./wp-content/uploads/2019/08/Mobile-App_maalbhaada-NET.jpg" alt="Mobile App"></a></li>
+			<li><a href="https://www.maalbhaadaconnect.com/categories/gifts-and-articles/cid-CU00315292.aspx#new_tab" target="_blank"><img src="./wp-content/uploads/2019/04/Channel-Partner-maalbhaada-01a-1.jpg" alt="Channel-Partner-maalbhaada"></a></li>
+			<li><a class='html5lightbox' data-width="480" data-height="320" href="https://www.maalbhaadaconnect.com/categories/gifts-and-articles/cid-CU00315292.aspx#new_tab" target="_blank" ><img src="./wp-content/uploads/2019/04/SG-Solutions-maalbhaada-01a.jpg"  alt="maalbhaada Fulfilment Services"></a></li>
+			<li><a class='html5lightbox' data-width="480" data-height="320" href="https://www.maalbhaadaconnect.com/categories/gifts-and-articles/cid-CU00315292.aspx#new_tab" target="_blank" ><img src="./wp-content/uploads/2019/04/SE-Web-Banners-maalbhaada-01a-1.jpg"  alt="maalbhaada Fulfilment Services"></a></li> -->
+			</ul>
+		
+		<div class="slider-text">
+
+
+		<div class="model-calci">
+        <!-- <div class="getb top">
+        <a href="./download-gst-invoice/" class="getlink left">Download GST Invoice</a>
+        </div> -->
+
+        <div class="accordian-box" id="backresponse">
+            <div id="accordion">
+                <h4>TRACK YOUR PARCEL <img src="./wp-content/themes/maalbhaada/images/accordian_plus.png"
+                        alt="Plus" title="Plus" style="display:none;" /></h4>
+
+                <div class="form-box">
+                    <div class="tabs">
+                        <div class="status">Get Status online</div>
+                        <div class="sms"> Get SMS Alerts</div>
+                        <div class="mail">Get Email Alerts</div>
+                    </div>
+
+                    <div id="status" class="hide">
+                        <div class="doc1">
+                            <form method="post" action="./track-by-docket" id="status1"
+                                name="status1">
+
+                                <table border="0" align="center" style="width: 100%;text-align: center;">
+                                    <tr>
+                                        <td colspan="2" style="text-align:center;padding:3px;color:#0c7e94;">Get Status
+                                            online</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50%"
+                                            style="text-align: right;padding-right: 12%;padding-bottom: 2%;"><input
+                                                type="radio" name="status" value="status_docket" checked="checked"
+                                                />Docket No</td>
+                                        <td width="50%" style="text-align: left;padding-left: 10%;">
+                                            <input type="radio" name="status" value="status_ref"> Ref No</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="padding: 2px;"> <textarea rows="2" cols="50"
+                                                placeholder="Type the Docket Number" name="docket_id" id="docket_id1"
+                                                value="" required="required"></textarea><br />
+                                            <span id="useCmmas">Use Commas(,) for multiple queries.</span> </td>
+                                    <tr id="recNameTr" style="display:none;">
+                                        <td colspan="2" style="padding: 2px; "> <textarea rows="2" cols="50"
+                                                placeholder="Receiver's Name" name="recName" id="recName" value=""
+                                                required="required"></textarea><br />
+
+                                    </tr>
+
+
+                                    <tr>
+                                        <td width="50%" style="text-align:left;padding-left:10%; padding-top: 10px;">
+                                            <input type="button" name="back" class="back" value="Back"></td>
+                                        <td width="50%"
+                                            style="text-align:left;padding-right:3%;vertical-align: middle;padding-top: 10px;">
+                                            <div id="doct">
+
+                                                <input type="submit" value="Submit" name="track1">
+
+
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                                <input type="hidden" name="g-recaptcha-response" class="recaptchaResponse">
+
+
+                            </form>
+                        </div>
+                    </div>
+                    <div id="sms" class="hide">
+                        <div>
+                            <form id="sms1" method="post" action="./smstracking/">
+                                <table border="0" align="center" style="width: 100%;text-align: left;">
+                                    <tr>
+                                        <td colspan="2" style="text-align:center;padding:7px;color:#0c7e94;">Get SMS
+                                            Alerts</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%"> Docket Number<span style="color: red;">*</span></td>
+                                        <td width="70%"><input type="text" name="smsdocket" value=""
+                                                placeholder="docket" id="smsdocket"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="30%">Mobile Number<span style="color: red;">*</span></td>
+                                        <td width="70%"><input type="text" name="smsmobile" value=""
+                                                placeholder="mobile" id="smsmobile"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align: left;padding: 4px 0px;"><input type="radio"
+                                                name="sms" value="progress" checked>SMS showing progress of
+                                            <br />&nbsp;&nbsp;&nbsp;&nbsp;consignment until delivered </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="text-align: left;padding: 4px 0px;"><input type="radio"
+                                                name="sms" value="delivery"> SMS only on delivery</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+
+                                            <input type="hidden" name="g-recaptcha-response" class="recaptchaResponse">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50%" style="text-align:left;padding-left:5%;"><input type="button"
+                                                name="back" class="back" value="Back"></td>
+                                        <td width="50%"
+                                            style="text-align:right;vertical-align: middle;padding-left: 25%;">
+
+                                            <input type="submit" value="submit" name="tracksms" id="tracksms12">
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="mail" class="hide">
+                        <div>
+                            <form id="mail1" method="post" action="./emailalert/">
+                                <table border="0" align="center" style="width: 100%;text-align: left;" cellpadding="1">
+                                    <tr>
+                                        <td colspan="2" style="text-align:center;padding:3px;color:#0c7e94;">Get E-mail
+                                            Alerts</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Docket Number<span style="color: red;">*</span></td>
+                                        <td><input type="text" name="docket_num" id="docket_num" required="required">
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Mobile<span style="color: red;">*</span></td>
+                                        <td><input type="text" name="mail_mob" id="mail_mob" required="required"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>E-mail<span style="color: red;">*</span></td>
+                                        <td><input type="email" name="mail_email" id="mail_email" required="required">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <input type="hidden" name="g-recaptcha-response" class="recaptchaResponse">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="50%" style="text-align:left;padding-left:3%;"><input type="button"
+                                                name="back" class="back" value="back"></td>
+                                        <td width="50%" style="text-align:left;padding-left: 27%;">
+
+                                            <input type="submit" name="track_email1" value="submit" id="trackemail2">
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="getb">
+                <a href="./shipping-cost-calculator" class="getlink">Get an estimate</a>
+                <a href="./courier-pickup-request/" class="getlink">Pickup request</a>
+            </div>
+        </div>
+	</div>
+		</div>
+
+		<!-- Test -->
+
+		
+		
+		
+	
+		
+		
+		
+		
+	
+
+		<!-- Test -->
+
+
+    </div>
+		<!-- Mobile banners -->
+		
+	
+			<div class="container services_cont1">
+			<div class="newheader01">
+				<h4>Our Services</h4>
+			</div>
+	<div class="container-left" style="width: 100%;height:auto;">
+		
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-1">
+		  <div class="new-div-video3">
+		  			  		<h4 class="fsvideo" id="video" >
+		  		<img class="icon" src="./wp-content/uploads/2017/11/play.png" width="16" height="16"> Watch
+		  		</h4>
+		  			  		  	
+		  <a href="./logistics-supply-chain-solutions/">
+            <img src="./wp-content/uploads/2018/03/end-logistics.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>End to end Logistics</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>maalbhaada Offers end to end supply chain solutions from origin to point of consumption across leading industries.</p>
+              <p><span class="grid-read-more"><a href="./logistics-supply-chain-solutions/">Read more &gt;</a></span></p>
+            		  			<p><span class="grid-read-more lightbox"><a class='html5lightbox' data-width="480" data-height="320" href="https://player.vimeo.com/video/239637701" >WATCH VIDEO </a></span></p>
+		  				  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-2">
+		  <div class="new-div-video3">
+		  			  		<h4 class="fsvideo" id="video" >
+		  		<img class="icon" src="./wp-content/uploads/2017/11/play.png" width="16" height="16"> Watch
+		  		</h4>
+		  			  		  	
+		  <a href="./supply-chain-logistics-solutions/">
+            <img src="./wp-content/uploads/2018/03/warehouse.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>Warehousing Solutions</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>We provide state of the art warehousing with 3.3 Million Sq Ft across 100+ critical locations.</p>
+              <p><span class="grid-read-more"><a href="./supply-chain-logistics-solutions/">Read more &gt;</a></span></p>
+            		  			<p><span class="grid-read-more lightbox"><a class='html5lightbox' data-width="480" data-height="320" href="https://player.vimeo.com/video/239643667" >WATCH VIDEO </a></span></p>
+		  				  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-3">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./ecommerce-logistics-shipping/">
+            <img src="./wp-content/uploads/2018/03/gr_5-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>E-Commerce Logistics</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>Your Unlimited Online Potential Meets our Unlimited Reach with API Enabled Operations.</p>
+              <p><span class="grid-read-more"><a href="./ecommerce-logistics-shipping/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-4">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./efulfilment-3pl-logistics/">
+            <img src="./wp-content/uploads/2016/11/kwe-truck.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>MVATS(Transportation)</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>Point to Point Bulk Transportation and Multi-Point Milk Run</p>
+              <p><span class="grid-read-more"><a href="./efulfilment-3pl-logistics/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-5">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./express-distribution-air-road-rail-transportation/">
+            <img src="./wp-content/uploads/2018/03/gr_3-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>Express Distribution</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>With 5000+ Trucks, 600+ Offices, 33 Air Centers, 12 Rail Centers, we deliver to 99% of India.</p>
+              <p><span class="grid-read-more"><a href="./express-distribution-air-road-rail-transportation/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-6">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./cold-chain-storage-transport-solutions/">
+            <img src="./wp-content/uploads/2018/03/gr_6-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>Cold Chain Solutions</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>maalbhaada Kausar is innovating end to end cold chain solutions in India.</p>
+              <p><span class="grid-read-more"><a href="./cold-chain-storage-transport-solutions/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-7">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./trading-inventory-management/">
+            <img src="./wp-content/uploads/2018/03/gr_2-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>Trading Solutions</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>We provide vendor & purchase order management, Export Import management, Centralized Distribution System & More.</p>
+              <p><span class="grid-read-more"><a href="./trading-inventory-management/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 
+		 	 <div class="container-grids div-video new-div-video2"  id="div-video" data-grid="grid-counter-8">
+		  <div class="new-div-video3">
+		  			  		  	
+		  <a href="./international-freight-forwarding/">
+            <img src="./wp-content/uploads/2018/03/gr_7-1.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="">
+			
+            <div class="grid-hover-effect">
+              <h4>Freight Forwarding</h4>
+              <!-- <div class="grid-hover-effect-text">
+              <p>We are leaders in APAC & SAARC with In House Custom Clearances. Members of Lognet, WCA Global, IATA.</p>
+              <p><span class="grid-read-more"><a href="./international-freight-forwarding/">Read more &gt;</a></span></p>
+            			  
+			  </div> -->
+            </div>
+			   </a>	
+			   </div>	  
+          </div>		 	
+		 	
+			</div>
+<div class="newheader01">
+  <h4>Special Services</h4>
+</div>
+<div class="container-left" style="width: 100%;height:auto;">
+
+		   		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2018/07/premium-flexilite.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>Shipments upto 5kgs via air @ just <strong><span class=”WebRupee”>Rs.</span>90</strong>** per kg</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2018/07/Laabh.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>Shipments upto 20kgs via surface @ just <strong><span class=”WebRupee”>Rs.</span>540</strong>**</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2019/11/02-1.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>Shipments upto 5kgs via surface @ just <strong><span class=”WebRupee”>Rs.</span>290</strong>**</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2018/07/art-exp.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>Ship priceless <br>art pieces.</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2018/07/student-exp.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>Designed for Students with special discounts.</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  		   	
+		  <a href="./new-landing/special-services/" class="service_anchLink1">
+		  	<div class="special_grids">
+			  	<!-- <a href="./express-distribution-air-road-rail-transportation/premium-flexilite/"><div class="special_grids"> -->
+				  <div class="sp_img">
+				  	<img src="./wp-content/uploads/2019/11/Bike-Express-1.png" alt="premium flexilite" />
+				  </div>
+				  <div class="sp_desc"><p>We’re Fully Geared To Take Your Bike Places!</p>
+	  	 
+				  </div>
+		  	</div>
+		  </a>
+		  	
+
+		  <!-- <a href="/shipping-cost-calculator/">
+		  		<div class="special_grids11">
+		  			<div class="rfind"><img src="/images/seasrsch.png"/>
+		  			</div>
+			  		<div class="sp_desc11">
+			  			<div class="sp_range"><strong>Product & Rate Finder</strong></div>
+			  			<p>Choose the right product.</p>
+			  		</div>
+		 		</div>
+		  </a>		   -->
+	</div>
+
+<!-- edit -->
+
+<div class="container-right2" id="track-your-parcel" style="width: 100%;">
+
+	
+	</div>
+        <!-- <div class="home-pickup"><h4><a href="./courier-pickup-request.jsp" class="fancybox-iframe">Pickup Request</a></h4></div>-->
+        <div class="rw12">
+        <div class="column12">
+        <div class="ahead-box-grid  ahead-box-height">
+            <div class="testimonials-box" style="display: flex;padding:45px;background-color:#d2ebf1;">
+
+			<div>
+						<img class="speaker2" src="./wp-content/themes/maalbhaada/images/spekers.png" alt="Speaker">
+					</div>
+                <div class="testimonials-slider" style="padding: 0">
+
+                    
+
+					
+
+                    <div class="slide">
+                        <div class="testimonials-carousel-context">
+							<div><h3>Customer's Speak</h3></div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_03.png" /></div> -->
+                            <div class="testimonials-carousel-content">
+                                <p><p>The supply chain management at maalbhaada is so sophisticated and well strategized that it has helped us optimize the costs involved than our own Warehouse. Also it helped to serve better to our regional customers for better reach of parts.</p>
+</p>
+                            </div><br />
+                            <div class="testimonials-name"><p>Nandkishor H. Sharma</p> </div>
+                            <div class="testimonials-name"><span>Mahindra & Mahindra</span>
+                            </div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_06.png" /></div> -->
+                        </div>
+                    </div>
+
+                    
+
+					
+
+                    <div class="slide">
+                        <div class="testimonials-carousel-context">
+							<div><h3>Customer's Speak</h3></div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_03.png" /></div> -->
+                            <div class="testimonials-carousel-content">
+                                <p><p>We have been using maalbhaada&#8217;s services for imports from Germany since last 6 months and we are happy with the international services. We look forward to having a long term association with maalbhaada.</p>
+</p>
+                            </div><br />
+                            <div class="testimonials-name"><p>B V Nagendra</p> </div>
+                            <div class="testimonials-name"><span>Schunk</span>
+                            </div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_06.png" /></div> -->
+                        </div>
+                    </div>
+
+                    
+
+					
+
+                    <div class="slide">
+                        <div class="testimonials-carousel-context">
+							<div><h3>Customer's Speak</h3></div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_03.png" /></div> -->
+                            <div class="testimonials-carousel-content">
+                                <p><p>The One year association with maalbhaada IMPORT EXPORT TRADING LTD, has led to a significant improvement in our goods flow , due to their good quality systems and service.</p>
+</p>
+                            </div><br />
+                            <div class="testimonials-name"><p>Srinivasan Rajagopalan</p> </div>
+                            <div class="testimonials-name"><span>Timex</span>
+                            </div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_06.png" /></div> -->
+                        </div>
+                    </div>
+
+                    
+
+					
+
+                    <div class="slide">
+                        <div class="testimonials-carousel-context">
+							<div><h3>Customer's Speak</h3></div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_03.png" /></div> -->
+                            <div class="testimonials-carousel-content">
+                                <p><p>maalbhaada has been our partner for movement of our CDC products for more than 5 years and helping us delivering products to our dealers at very good service levels consistently.</p>
+</p>
+                            </div><br />
+                            <div class="testimonials-name"><p>Mohammedrafi Sarvar</p> </div>
+                            <div class="testimonials-name"><span>Asian Paints</span>
+                            </div>
+                            <!-- <div class="quote"><img align="center" alt=""
+                                    src="/wp-content/themes/maalbhaada/images/maalbhaada_06.png" /></div> -->
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </div></div>
+        <div class="column12">
+		<div class="ahead-box-grid1 ahead-box-height" style="display: flex;">
+
+<div>
+<img class="ahead-img" src="./wp-content/themes/maalbhaada/images/locati2n.png" alt="Location">
+</div>
+
+            <div class="find_loc">
+                <div class="fhead">Find a location</div>
+                <div class="fdesc">Enter a postal code or city to find the maalbhaada and maalbhaada office locations near you</div>
+                <form method='post' name="Locateus" id="Locateus" target="_blank"
+                    action='./tools/locate-us'>
+                    <div class="radiostyle"><input type="radio" checked="" value="pincode" name="searchBy"> <span
+                            style="color:#fff;">By Pincode</span></div>
+                    <div class="radiostyle"><input type="radio" checked="" value="location" name="searchBy"> <span
+                            style="color:#fff;">By Location</span></div>
+                    <input maxlength="50" name="locationDom" id="pincodeDom" class="search-field2">
+
+                    <button type="submit" class="search-submit2" name="Submit" style="background-color:#2e3092;"><span
+                            class="screen-reader-text">Submit</span></button>
+                    <div id="locationDom_validate"></div>
+
+                    <input type="hidden" name="g-recaptcha-response" class="recaptchaResponse">
+                </form>
+
+                
+            </div>
+
+        </div>
+    </div>
+		</div>
+		</div>
+
+
+	
+	</div><!-- .site-content -->
+  </div>
+	<footer id="colophon" class="site-footer" role="contentinfo">
+	<div id="footer_bg" style="background-color: #dcdcdc;margin-bottom:40px;">
+	<div class="container">
+	
+	<div class="footer_01">
+
+		<!-- <ul>
+			<li><a href="./track-by-docket/">Track Your Parcel</a></li>
+			<li><a href="./courier-pickup-request/">Pickup Request</a></li>
+			<li><a href="./shipping-cost-calculator/">Get an Estimate</a></li>
+			<li><a href="./contact-us/contact-details/">Contact Us</a></li>
+			<li><a href="#">Partner with us</a></li>
+		</ul> -->
+
+		<form role="search" method="post" class="search-form" action="./subscribe.php">
+		<ul class="sitemap_info" style="border:none">
+			<!-- <li><a target="_blank" href="./sitemap/">Site map<img style="padding: 9px;margin: -1% 19%;%;background-color:#0096b1;position: absolute;" src="./wp-content/uploads/2017/04/arrow.png" ></img></a></li> -->
+			<span style="font-weight: 500;margin-right:15px;font-size:18px;color:#000;">Subscribe to maalbhaada Email</span> 
+			<input type="email" name="email" placeholder="Enter Email" required><button type="submit" class="search-submit2">Signup</img></button>
+		
+		</ul>
+		</form>
+		<ul class="siteinfo siteinfo2">
+			<!-- <li><a href="#">@ maalbhaada Ltd. All rights reserved</a></li> -->
+			<li><a href="https://www.facebook.com/maalbhaadalimited?fref=ts" class=""><img src="./wp-content/themes/maalbhaada/images/fz01.png" alt=""></a></li>
+			<li><a href="https://mobile.twitter.com/maalbhaadaKWEIndia" class=""><img src="./wp-content/themes/maalbhaada/images/fz02.png" alt=""></a></li>
+			<li><a href="https://www.linkedin.com/company/maalbhaada-limited" class=""><img src="./wp-content/themes/maalbhaada/images/fz03.png" alt=""></a></li>
+			<li><a href="https://www.youtube.com/channel/UCYo7slFSRC9AWWw7becHTIw/featured?view_as=subscriber" class=""><img src="./wp-content/themes/maalbhaada/images/fz04.png" alt=""></a></li>
+			<li><a href="#" class=""><img src="./wp-content/themes/maalbhaada/images/line012.PNG" alt=""></a></li>
+			<li><a href="https://play.google.com/store/apps/details?id=com.maalbhaada.maalbhaadaconsumer&hl=en" class=""><img src="./wp-content/themes/maalbhaada/images/fz05.png" alt=""></a></li>
+			<li><a href="https://apps.apple.com/au/app/maalbhaadaconsumer/id995166307" class=""><img src=".//wp-content/themes/maalbhaada/images/fz06.png" alt=""></a></li>
+			
+		</ul>
+		</div>
+	</div>
+		
+	</div>
+	
+	<div id="footer_bottom">
+	
+
+	<!-- <div class="" style="width:100%;">
+<div style="">
+	<a href=""> </a>
+</div></div> -->
+
+	
+	
+
+	</div>
+</div>
+	
+
+
+</div><!-- .site -->
+
+
+
+</footer>
+<div class="container2">
+
+	<div class="footer_01">
+	
+	<div class="container-grids2">
+	<ul class="about-us-fts">
+	</li><li><a href='./about-us/maalbhaada-profile/'><span class="footerheader">Services</span></a></li>
+	<li><a class="footersubmenu" href='./express-distribution-air-road-rail-transportation/'>maalbhaada-KWE Express Distribution</a></li> 
+					  	<li><a class="footersubmenu" href='#'>maalbhaada-KWE Special Services</a></li>
+						<!-- <li><a href='./our-services/special-services/laabh/'>Laabh</a></li>
+						<li><a href='./our-services/special-services/desk-desk-cargo/'>Desk to Desk</a></li> -->
+						<!-- <li><a href='./our-services/special-services/premium-flexilite/'>Premium Flexilite</a></li>
+						<li><a href='./our-services/special-services/student-express/'>Student Express</a></li>
+						<li><a href='./our-services/special-services/art-express/'>Art Express </a></li>
+						<li><a href='./our-services/special-services/excess-baggage/'>Excess Baggage</a></li>
+						<li><a href='./our-services/special-services/bike-express/'>Bike Express</a></li> -->
+						<li><a class="footersubmenu" href='./our-services/warehousing-solutions/'>maalbhaada-KWE SCM-Warehousing Solutions</a> </li> 
+						<li><a class="footersubmenu" href='./our-services/transportation-services/'>maalbhaada-KWE Transportation Services</a></li>
+						<li><a class="footersubmenu" href='./ecommerce-logistics-shipping/'>E-commerce</a></li>
+						<li><a class="footersubmenu" href='./efulfilment-3pl-logistics/'>MVAT</a></li> 
+						<li><a class="footersubmenu" href='./cold-chain-storage-transport-solutions/'>Cold Chain Solutions</a></li> 
+						<li><a class="footersubmenu" href='./trading-inventory-management/'>Trading Solutions</a></li>
+						<li><a class="footersubmenu" href='./logistics-supply-chain-solutions/'>End-to-End Logistics</a></li> 
+						<li><a class="footersubmenu" href='./international-freight-forwarding/'>Freight Forwarding</a></li>
+                        <li><a class="footersubmenu" href='./our-services/gst-solutions/'>GST Solutions </a></li>
+                        <!-- <li><a class="footersubmenu" href='./maalbhaada-connect/'>maalbhaadaconnect </a></li> -->
+	</ul>
+	
+	
+
+	</div>
+
+
+	<div class="container-grids2">
+	<ul class="about-us-fts">
+	<li><a href='./about-us/maalbhaada-profile/'><span class="footerheader">Tools</span></a></li>
+	<li><a class="footersubmenu" href='./shipping-cost-calculator/'>Rate & Transit Time Calculator</a></li> 
+						<li><a class="footersubmenu" href='./pdf/ESS_matrix.pdf'>ESS Matrix</a> </li> 
+						<li><a class="footersubmenu" href='./pdf/DocumentsRequired.pdf'>Documents Required</a></li>
+						<li><a class="footersubmenu" href='./pdf/Retail-04-08-2017.pdf'>Terms and Conditions</a></li> 
+						<li><a class="footersubmenu" href='./convert-weightvolume/'>Convert Weight/Volume</a></li>
+						<li><a class="footersubmenu" href='./tools/view-fuel-diesel-surcharge/'>Fuel & Diesel Surcharge</a></li> 
+						<li><a class="footersubmenu" href='./pdf/ODA_Website.pdf'>ODA Locations</a></li>
+						 <li><a class="footersubmenu" href='./tools/locate-us/'>Locate Us</a></li> 
+						 <li><a class="footersubmenu" href='./claims-process/'>Claims Process</a></li>
+						 <li><a class="footersubmenu" href='./download-gst-invoice'>Download GST Invoice</a></li>
+    </ul>
+	</div>
+
+
+	<div class="container-grids2">
+	<ul class="about-us-fts">
+	<li><a href='./about-us/maalbhaada-profile/'><span class="footerheader">Investor Relations</span></a></li>
+	<li><a class="footersubmenu" href='./investor-relations/'>maalbhaada Corporate Profile</a></li> 
+	<li><a class="footersubmenu" href='./investor-relations/bodkeymanagerial/'>Board of Directors </a></li>
+	<li><a class="footersubmenu" href='./investor-relations/bodkeymanagerial/'>Managerial Personnel</a></li>
+	<li><a class="footersubmenu" href='./wp-content/uploads/2015/12/T&C%20for%20Independent%20Directors.pdf'>Independent Directors</a></li>
+	<li><a class="footersubmenu" href='./investor-relations/policies/'>Policies</a></li> 
+	<li><a class="footersubmenu" href='./about-us/maalbhaada-profile/'>Disclosures</a></li>
+	<li><a class="footersubmenu" href='./investor-relations/chairman-speeches/'>Chairman Speech</a></li> 
+	<li><a class="footersubmenu" href='./about-us/maalbhaada-profile/'>Investor Details</a></li>
+	<li><a class="footersubmenu" href='./investor-relations/announcements/'>Announcements</a></li> 
+	<li><a class="footersubmenu" href='./investor-relations/analyst-coverage/'>Investor Analyst Coverage</a></li> 
+
+    </ul>
+	</div>
+
+	<div class="container-grids2">
+
+	<ul class="about-us-fts">
+	<li><a href='./careers/working-with-maalbhaada'><span class="footerheader">Careers</span></a></li>
+	<li><a class="footersubmenu" href='./careers/working-with-maalbhaada/'>We at  maalbhaada</a></li>
+	<!-- <li><a href='./careers/work-culture/'>Work Culture</a></li>
+	<li><a href='./careers/talent-development/'>Talent Development</a></li> -->
+	<li><a class="footersubmenu" href='./careers/hr-philosophy/'>HR Philosophy </a></li>
+	<li><a class="footersubmenu" href='./careers/career-toolkit/'>Career Toolkit </a></li> 
+	<li><a class="footersubmenu" href='./careers/partner-center/become-a-ga/'>Become a GA</a></li>
+	<li><a class="footersubmenu" href='./careers/partner-center/vendor-registration/'>Vendor Registration</a></li>
+	<li><a class="footersubmenu" href='./careers/partner-center/maalbhaada-convenience-center/'>maalbhaada Customer Convenience Center - Franchise</a></li>
+	<li><a class="footersubmenu" href='./careers/job-faqs/'>Job Faqs</a> </li> 
+    <li><a class="footersubmenu" href='https://hrms.maalbhaada.net:8091/Login.aspx' target='_blank'>Vendor Portal</a> </li> 
+	<li><a class="footersubmenu" href='https://hrms.maalbhaada.net:8091/candidates/candidates_home.aspx?rms=candidatelist' target='_blank'>Candidate Portal</a> </li> 
+	<li><a class="footersubmenu" href='./careers/current-openings/' >Current Openings</a> </li> 
+						</ul>
+
+	</div>
+
+	<div class="container-grids2">
+	<ul class="about-us-fts">
+	<li><a href='./about-us/maalbhaada-profile/'><span class="footerheader">About Us</span></a></li>
+	<li><a class="footersubmenu" href='./about-us/maalbhaada-profile/'>maalbhaada Profile</a></li> 
+	<li><a class="footersubmenu" href='./about-us/kwe-about-us/'>maalbhaada-KWE</a></li>
+	<!-- <li><a href='./about-us/kwe-about-us/'>About Us</a></li>
+	<li><a href='./about-us/maalbhaada-kwe-management/maalbhaadakwe-board-of-directors/'>Board of Directors</a></li> -->
+	<li><a class="footersubmenu" href='./about-us/vision-and-values/'>Vision and values</a> </li> 
+	<li><a class="footersubmenu" href='./about-us/founder-ceos-message/'>Founder & CEOs Message</a></li> 
+	<li><a class="footersubmenu" href='./about-us/maalbhaada-profile/'>Management</a></li>
+	<!-- <li><a href='./about-us/management/bod/'>Board of Directorsm</a></li>
+	<li><a href='./about-us/management/leadership-team/'>Leadership Team</a></li> -->
+	<li><a class="footersubmenu" href='./about-us/milestones/'>Milestones</a></li> 
+	<li><a class="footersubmenu" href='./about-us/awards-recognitions/'>Awards & Recognitions</a></li> 
+	<li><a class="footersubmenu" href='./about-us/maalbhaada-history/'>maalbhaada history</a></li>
+	<li><a class="footersubmenu" href='./about-us/corporate-video/'>Corporate video</a></li> 
+	</ul>
+	
+	<!-- <ul class="about-us-fts" style="margin-top:15px; ">
+	</li><li><a href='./csr/'><span class="footerheader">CSR</span></a></li>
+	<li><a href='./csr/'>Corporate Social Responsibility</a></li> 
+	<li><a href='./wp-content/uploads/2020/02/maalbhaada-CSR-Policy.pdf'>maalbhaada CSR Policy </a></li> 
+	</ul> -->
+	
+	
+	</div>
+
+	
+
+<!--
+	<div class="container-grids">
+
+
+
+
+
+	 <ul class="about-us-fts">
+	</li><li><a href='./tools/'><span class="footerheader">Tools</span></a></li>
+	<li><a href='./shipping-cost-calculator/'>Rate & Transit Time Calculator</a></li> 
+	<li><a href='./pdf/ESS_matrix.pdf'>ESS Matrix</a> </li> 
+	<li><a href='./pdf/DocumentsRequired.pdf'>Documents Required</a></li>
+	<li><a href='./pdf/Retail-04-08-2017.pdf'>Terms and Conditions</a></li> 
+	<li><a href='./convert-weightvolume/'>Convert Weight/Volume</a></li>
+	<li><a href='./tools/view-fuel-diesel-surcharge/'>Fuel & Diesel Surcharge</a></li> 
+	<li><a href='./pdf/ODA_Website.pdf'>ODA Locations</a></li>
+    <li><a href='./tools/locate-us/'>Locate Us</a></li> 
+	<li><a href='./claims-process/'>Claims Process</a></li>
+	<li><a href='./download-gst-invoice'>Download GST Invoice</a></li>
+	</ul> -->
+
+
+	<!-- <ul class="about-us-fts" style="margin-top:15px; ">
+	<li><a href='./about-us/maalbhaada-profile/'><span class="footerheader">Investor Details</span></a></li>
+	<li><a href='.//wp-content/uploads/2019/09/maalbhaada-fixed-deposit-form-2019-1.pdf'>FD Schemes</a></li> 
+	<li><a href='./investor-relations/listing-information'>Listing Information</a> </li> 
+	<li><a href='./investor-relations/shareholder-registration-form/'>Shareholder Registration Form</a></li>
+	<li><a href='./investor-relations/investor-feedback/'>Investor Feedback</a></li> 
+	<li><a href='./wp-content/uploads/2018/10/Transfer-of-Shares-in-Demat-Form.pdf'>Demat</a></li>
+	<li><a href='./investor-relations/contact-us/'>Contact Us</a></li>
+	</ul> 
+	
+
+	</div>
+-->
+<!--
+	<div class="container-grids">
+
+	
+	 <ul class="about-us-fts">
+	</li><li><a href='./careers/working-with-maalbhaada'><span class="footerheader">Careers</span></a></li> 
+	<li><a href='#'>We at maalbhaada</a></li>
+	<li><a href='./careers/working-with-maalbhaada/'><span class="submenu2">  - Working with maalbhaada</span></a></li>
+	<li><a href='./careers/work-culture/'><span class="submenu2">  Work Culture</span></a></li>
+	<li><a href='./careers/talent-development/'><span class="submenu2">  Talent Development<>/span></a></li>
+	<li><a href='./careers/hr-philosophy/'>HR Philosophy </a></li>
+	<li><a href='./careers/career-toolkit/'>Career Toolkit </a></li> 
+	<li><a href='#'>Partner Center </a></li>
+	<li><a href='./careers/partner-center/become-a-ga/'><span class="submenu2"> - Become a GA</span></a></li>
+	<li><a href='./careers/partner-center/vendor-registration/'><span class="submenu2">  Vendor Registration</span></a></li>
+	<li><a href='./careers/partner-center/maalbhaada-convenience-center/'><span class="submenu2">  - maalbhaada Customer Convenience Center - Franchise </span></a></li>
+	<li><a href='./careers/job-faqs/'>Job Faqs</a> </li> 
+    <li><a href='https://hrms.maalbhaada.net:8091/Login.aspx' target='_blank'>Vendor Portal</a> </li> 
+	<li><a href='https://hrms.maalbhaada.net:8091/candidates/candidates_home.aspx?rms=candidatelist' target='_blank'>Candidate Portal</a> </li> 
+	<li><a href='./careers/current-openings/' >Current Openings</a> </li> 
+	</ul> -->
+
+
+<!-- 
+	<ul class="about-us-fts" style="margin-top:15px;">
+	<li><a href='./media-center/press-releases'><span class="footerheader"> Media Center</span></a></li>
+	<li><a href='./media-center/press-releases/'>Press Releases</a></li> 
+	<li><a href='./media-center/press-coverages/'>Press Coverages</a></li> 
+	<li><a href='#'>Press Kit</a>
+	<li><a href='./about-us/maalbhaada-profile/'><span class="submenu2">  maalbhaada Corporate Profile</span></a></li>
+	<li><a href='./media-center/maalbhaada-logo/'><span class="submenu2">  maalbhaada Logo</span></a></li>
+	<li><a href='./media-center/maalbhaada-quick-facts/'><span class="submenu2">  maalbhaada Quick Facts</span></a></li> 
+	<li><a href='./media-center/media-contacts/'>Media Contacts</a></li> 
+	<li><a href='./media-center/events/'>Events</a></li>
+	</ul> 
+
+
+	</div>
+-->
+	
+
+
+	  <!-- <ul class="socialicons">
+		 <li><a class="facebook" href="https://www.facebook.com/maalbhaadalimited?fref=ts"></a> </li>
+		<li> <a class="linkedin" href="https://www.linkedin.com/company/63646/"></a> </li> 					
+		<li> <a class="twitter" href="https://mobile.twitter.com/maalbhaadaKWEIndia"></a> </li> 
+		<li> <a class="wiki1" href="https://en.wikipedia.org/wiki/maalbhaada_Ltd"></a> </li> 
+		<li> <a class="instagram" href="https://www.instagram.com/explore/locations/887604309/maalbhaada-limited"></a> </li>
+	  </ul> -->
+	 
+	  <!-- <form role="search" method="post" class="search-form" action="./subscribe.php">
+		 <ul class="email_sub">
+		 
+		<input type="email" name="email" placeholder="Subscribe to maalbhaada Emails" required><button type="submit" class="search-submit"><img style="padding: 3px;margin: -4% 0%;background-color:#0096b1" src="./wp-content/uploads/2017/04/arrow.png" ></img></button>
+		</ul>
+	  </form> -->
+	  <!-- <span class="app-right">
+	  	<a href="https://play.google.com/store/apps/details?id=com.maalbhaada.maalbhaadaconsumer&hl=en" target="_blank"><img src="./wp-content/uploads/2017/08/googleplay-1.png" width="137" alt="playstore" title="playstore"/></a>
+		<a href="https://itunes.apple.com/au/app/maalbhaadaconsumer/id995166307?mt=8" target="_blank"><img src="./wp-content/uploads/2017/08/applestore.png" alt="appstore" title="appstore"/></a>
+	  </span> -->
+		
+
+	
+	</div>
+	</div>
+<!-- .site-footer -->
+
+<div class="container2">
+<div class="footer-text" style="text-align: center;color: #000">
+		<p>Copyright © 2017 maalbhaada-Kintetsu Express Private Limited.</p>
+	</div>
+
+</div>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+	function recaptchaCallback() {
+	  $('#hiddenRecaptcha').valid();
+	  $('#hiddenRecaptcha1').valid();
+	};
+</script>
+
+<!--Push Engage-->
+<script src="https://clientcdn.pushengage.com/core/10277.js"></script>
+<script>
+_pe.subscribe();
+</script>
+
+<!----->
+
+<!-- custom scrollbar plugin -->
+	<script src="./wp-content/themes/maalbhaada/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+<script>
+		(function($){
+			$(window).load(function(){
+				
+				/*$(".year-wise-awards").mCustomScrollbar({
+					theme:"minimal"
+				});*/
+				/*$(".milestones-text").mCustomScrollbar({
+					theme:"minimal"
+				});*/
+				/*$(".entry-content").mCustomScrollbar({
+					theme:"minimal"
+				});*/
+				
+				/*For Quick Links Sidebar*/
+				$(".quick-links-container").mCustomScrollbar({
+					theme:"minimal"
+				});
+				
+			});
+		})(jQuery);
+		
+		$(document).ready(function(){ 
+		var windowSize = $(window).width();
+
+        if (windowSize >= 1440) {
+		   $('.inner-page-container').css('min-height',+$(window).height()-200+'px');
+		   //$('.main-container').css('min-height',+$(window).height()-200+'px');
+	   }
+/*select dropdown services*/
+   $("#product").change(function () {
+	  // alert($("#product").val());
+     if($("#product").val()=='00,Express Distribution - Air | Surface | Rail'){
+	  
+		$(".product").css("display", "block");
+		} else {
+	
+	   $('#product1').removeAttr('required');
+		$(".product").css("display", "none");
+		
+   }
+   });
+
+    $("input[value='Yes']").click(function() {
+       
+        var test = $(this).val();
+		
+	
+        $(".desc").show();
+		$('#regno').AddAttr('required');
+		$('#vecmake').AddAttr('required');
+		$('#model').AddAttr('required');
+		$('#payload').AddAttr('required');
+		$('#vehicleTypeFr').AddAttr('required');
+       
+    }); 
+	$("input[value='NO']").click(function() {
+       
+        var test = $(this).val();
+		$('#regno').removeAttr('required');
+		$('#vecmake').removeAttr('required');
+		$('#model').removeAttr('required');
+		$('#payload').removeAttr('required');
+		$('#vehicleTypeFr').removeAttr('required');
+		
+       
+         $(".desc").hide();
+    }); 
+	
+});
+	</script>
+	
+	 <SCRIPT language=JavaScript>
+<!--
+function s_show(){return false}
+function s_hide(){return false}
+if(window.event+''=='undefined')event=0
+ROOT=''
+
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+function explain1(name, output, msg) {
+newwin = window.open('','','top=150,left=150,width=350,height=450');
+if (!newwin.opener) newwin.opener = self;
+with (newwin.document)
+{
+open();
+write('<html>');
+write('<body>' + msg + '<br>');
+write('</body></html>');
+close();
+   }
+
+}//end of function
+
+function roundOff(value)
+{
+	value = value * 100;
+	value = Math.round(value);
+	value = value / 100;
+	return value;
+}
+
+function fun2()
+{
+
+str=document.frm_maalbhaadacal.D3.options[document.frm_maalbhaadacal.D3.selectedIndex].text 
+str1=document.frm_maalbhaadacal.D4.options[document.frm_maalbhaadacal.D4.selectedIndex].text 
+if(str=="Sq.Centimeter")
+		{
+			if(str1=="Sq.Centimeter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Meter") {
+
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00040
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.1550003
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.001076391
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.000119599
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00000000003861022
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}		
+
+	if(str=="Sq.Meter")
+		{
+			if(str1=="Sq.Meter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 10000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1550.003
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 10.76391 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1.19599
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0000003861022
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}	
+	if(str=="Sq.Inch")
+		{
+			if(str1=="Sq.Inch") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 6.4516
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00064516
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00694444444 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0007716049
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0000000002490977
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}					
+	if(str=="Sq.Feet")
+		{
+			if(str1=="Sq.Feet") {
+			value  =document.frm_maalbhaadacal.txtnum.value
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 929.0304
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.09290304
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 144.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.111111111
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00000003587007
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}												
+	if(str=="Sq.Yard")
+		{
+			if(str1=="Sq.Yard") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 8361.273
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.8361273
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1296.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 9.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0000003228306
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}								
+	if(str=="Sq.Mile")
+		{
+			if(str1=="Sq.Mile") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 25899880000
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 2589988.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 4014490000
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 27878400
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+			if (str1=="Sq.Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 3097600.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum2.value = value;
+			}
+		}	
+}//end of function
+function fun1()
+{
+	
+ str=document.frm_maalbhaadacal.D1.options[document.frm_maalbhaadacal.D1.selectedIndex].text 
+ str1=document.frm_maalbhaadacal.D2.options[document.frm_maalbhaadacal.D2.selectedIndex].text 
+
+	if (str=="Centimeter")
+		{
+			if (str1=="Centimeter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0100
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.3937008
+			value = roundOff(value);
+                     document.frm_maalbhaadacal.txtnum1.value = value;
+              
+			}
+			if (str1=="Foot") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0328084
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.01093613
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00000621372
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}
+		if(str=="Meter")
+		{
+			if(str1=="Meter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 100
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 39.37008
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Foot") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 3.28084
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1.093613
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0006213712
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}
+			
+		if(str=="Inch")
+		{
+			if(str1=="Inch") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 2.54
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0254
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Foot") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.08333333
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.02777777
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00001578283
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}		
+			
+		if(str=="Foot")
+		{
+			if(str1=="Foot") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 30.48
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.3048
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 12.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.333333333
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0001893939
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}		
+			
+		if(str=="Yard")
+		{
+			if(str1=="Yard") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 91.44
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.9144
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 36.0	
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Foot") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 3.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Mile") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0005681818
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}		
+			
+		if(str=="Mile")
+		{
+			if(str1=="Mile") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 160934.4
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1609.344
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 63360.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Foot") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 5280.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+			if (str1=="Yard") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1760.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum1.value = value;
+			}
+		}		
+}//end of function
+
+function fun3()
+{
+str=document.frm_maalbhaadacal.D5.options[document.frm_maalbhaadacal.D5.selectedIndex].text 
+str1=document.frm_maalbhaadacal.D6.options[document.frm_maalbhaadacal.D6.selectedIndex].text 
+if(str=="Gram")
+		{
+			if(str1=="Gram") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Kilogram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Oz") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.03527396
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Lb") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.002204623
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="MetricTonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0000010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Tonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.000001102311
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}								
+			
+		if(str=="Kilogram")
+		{
+			if(str1=="Kilogram") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Gram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Oz") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 35.27396
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Lb") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 2.204623
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="MetricTonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Tonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.001102311
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}								
+		if(str=="Oz")
+		{
+			if(str1=="Oz") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Gram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 28.34925
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Kilogram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.02834952
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Lb") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0625
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="MetricTonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0002834952
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Tonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00003125
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}								
+		if(str=="Lb")
+		{
+			if(str1=="Lb") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Gram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 453.5924
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Kilogram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.4535924
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Oz") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 16.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="MetricTonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0004535924
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Tonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00050
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}		
+		if(str=="MetricTonne")
+		{
+			if(str1=="MetricTonne") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Gram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Kilogram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Oz") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 35273.96
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Lb") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 2204.623
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Tonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1.102311
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}			
+		if(str=="Tonne")
+		{
+			if(str1=="Tonne") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Gram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 907184.7
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Kilogram") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 907.1847
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Oz") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 32000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="Lb") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 2000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+			if (str1=="MetricTonne") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.9071847
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum3.value = value;
+			}
+		}				
+			
+
+
+}//end of function
+function fun4()
+{
+str=document.frm_maalbhaadacal.D7.options[document.frm_maalbhaadacal.D7.selectedIndex].text 
+str1=document.frm_maalbhaadacal.D8.options[document.frm_maalbhaadacal.D8.selectedIndex].text 
+
+ if(str=="Cubic.Meter")
+		{
+			if(str1=="Cubic.Meter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 61023.74
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 35.31467
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Litre") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Gallon") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 264.1721
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}					
+	 if(str=="Cubic.Centimeter")
+		{
+			if(str1=="Cubic.Centimeter") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0000010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.06102374
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00003531258
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Litre") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Gallon") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.000264172
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}					
+
+	if(str=="Cubic.Inch")
+		{
+			if(str1=="Cubic.Inch") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.00001638706
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 16.38706
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0005787037
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Litre") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.01638706
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Gallon") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.004329004
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}								
+  
+	if(str=="Cubic.Feet")
+		{
+			if(str1=="Cubic.Feet") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.02831685
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 28316.85
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1728.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Litre") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 28.31685
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Gallon") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 7.48052
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}								
+	
+	if(str=="Litre")
+		{
+			if(str1=="Litre") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.0010
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+
+			}
+			if (str1=="Cubic.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 1000.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 61.02374
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.03531467
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Gallon") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.2641721
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}						
+			
+	if(str=="Gallon")
+		{
+			if(str1=="Gallon") {
+			value  =document.frm_maalbhaadacal.txtnum.value 
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Meter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.003785412
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Centimeter") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 3785.412
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Inch") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 231.0
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Cubic.Feet") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 0.1336806
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+			if (str1=="Litre") {
+			value  =eval(document.frm_maalbhaadacal.txtnum.value) * 3.785412
+			value = roundOff(value);
+			document.frm_maalbhaadacal.txtnum4.value = value;
+			}
+		}																  
+
+
+
+
+}//end of function
+
+function validateForm(id) {
+   return false;
+	
+}
+
+
+</SCRIPT>
+
+<script language="JavaScript">
+function showdtls(id)
+{
+document.frmdtls.id.value=id;
+document.frmdtls.submit();
+}	 
+</script>
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?4u88QPFm0pP8XtY2LpwzBcGJLn8KYzxl";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+<script type="text/javascript" src="./wp-content/themes/maalbhaada/html5lightbox/html5lightbox.js"></script>
+
+<style>
+
+body{
+	overflow-x:hidden;
+}
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"], textarea, select {
+
+    border: 1px solid #c7c7c7 !important;
+}
+
+input[type="submit"]{
+
+cursor: pointer;
+
+}
+
+/* ul li:first-child button.sliderbuttan2 {
+    display: none;
+} */
+
+.sy-pager {
+    z-index: 1200 !important;
+    cursor: pointer;
+}
+
+.container2{
+	margin: 0 auto;
+    max-width: 1243px;
+    width: 100%;   
+}
+
+
+.about-us-fts>li{
+	float: unset !important;
+	list-style-type: none;
+}
+
+
+.inner-left-sidebar {
+    margin: 3% 1% 0 1%;
+}
+
+.inner-page-container {
+    margin: 35px 1% 0 1%;
+}
+
+.sp_img {
+   padding-top: 42px;
+}
+
+.sp_desc {
+background-color: unset;
+}
+
+.footersubmenu:hover{
+	border-bottom: 1px solid #0095b1;
+}
+
+.main-container {
+    padding: 0;
+}
+
+.menu-clm3>li{
+	width: 148px !important;
+}
+
+.widthcontact{
+	width: 159px !important;
+}
+
+
+
+
+.new-mwnu25{
+	columns: 2; 
+	/* padding: 15px !important; */
+}
+
+/* .navimaalbhaadaon ul ul {
+    top: 93% !important;
+	} */
+
+.menu-clm2 li{
+	padding: 10px;
+}
+
+.sub-menu-left7{
+	left: auto !important;
+    right: 100% !important;
+	top: -54px !important;
+    columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-right6 {
+    right: auto !important;
+    left: 100% !important;
+    top: 15px !important;
+    columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-left06{
+	left: auto !important;
+    right: 100% !important;
+	top: 5px !important;
+    columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-left06>li{
+width: 370px !important;
+}
+
+
+
+.sub-menu-left{
+	left: auto !important;
+    right: 100% !important;
+    top: 15px !important;
+	margin-top: -10% !important;
+	columns: 1 !important;
+    position: absolute !important;
+}
+
+
+
+.sub-menu-left4{
+	left: auto !important;
+    right: 100% !important;
+    top: 60px !important
+	columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-left5{
+	left: auto !important;
+    right: 100% !important;
+    top: -30px !important;
+	columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-left6{
+	left: auto !important;
+    right: 100% !important;
+    columns: 1 !important;
+    position: absolute !important;
+}
+
+.sub-menu-right3{
+    position: absolute !important;
+}
+
+.sub-menu-right{
+	right: auto !important;
+    left: 60.8% !important;
+	top: 112px !important;
+	margin-right: 16px !important;
+	margin-top: -10% !important;
+	columns: 1 !important;
+    position: fixed !important;
+}
+
+
+
+
+
+.navimaalbhaadaon ul a {
+    padding: 13px 10px;
+}
+
+.navimaalbhaadaon ul ul li {
+   padding: 8px 2px;
+}
+
+
+.login-mobile2{
+	color: #3fafc4;
+	font-size: 18px;
+	padding-left: 8px;
+}
+
+.navimaalbhaadaon ul li a {
+    color: #505050;
+}
+
+.right-floating-container {
+    z-index: 1200;
+}
+
+.testimonials-carousel-content>p,
+.bx-wrapper span{
+	font-size: 14px !important;
+	color: #505050;
+}
+
+
+.special_grids {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+.container-grids {
+	float: left;
+    margin: 0 25px 25px 0;
+    width: 23%;
+}
+.container-grids:nth-child(4n) {
+    margin: 0 0 25px 0;
+}
+
+.special_grids11{
+	margin: 0 25px 25px 0;
+    width: 22%;
+}
+
+
+
+#footer_bg {
+    padding: 20px 0 5px 0;
+}
+
+.bx-wrapper .bx-viewport{
+	padding: 20px;
+}
+
+.ahead-img{
+	padding-top: 35px;
+}
+
+.testimonials-carousel-context>h3{
+	font-size:21px;
+	font-weight: 600;
+}
+
+.speaker2{
+	padding-top: 21px;
+}
+
+.special_grids:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border: 1px solid #fff;
+}
+
+.quick-links-button1 {
+    right: 90px !important;
+}
+
+.right-icons2{
+	padding-bottom: 5px;
+	padding-top: 10px;
+}
+
+.right-icons3{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+.quick-links-head1 {
+	background: #fdb913 none repeat scroll 0 0;
+	border-radius: 10px 0px 0px 10px;
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	width: 69px;
+}
+
+.login-toggle-1{
+	cursor: pointer;
+}
+
+
+input.search-field2{
+	width: 78%;
+	padding: 9px;
+	height: unset !important;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+}
+
+
+input[type="email"] {
+   
+    padding: 9px 8px;
+}
+
+.quick-links-head2 {
+    background: #2e3092 none repeat scroll 0 0;
+    border-radius: 10px 10px 10px 10px;
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    width: 99px;
+}
+
+.quick-links-head3 {
+    background: #2e3092 none repeat scroll 0 0;
+    border-radius: 10px 10px 10px 10px;
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    width: 120px;
+}
+
+.dailinggpick{
+	font-size: 10px;
+	padding-top: 5px;
+	padding-bottom:5px;
+}
+
+.quick-links-button2 {
+	position: relative;
+    right: 150px;
+    top: 274px;
+    border-radius: 16px;
+    line-height: normal;
+    padding: 15px;
+    background: #2e3092;
+    cursor: pointer;
+}
+
+.quick-links-button3 {
+	position: relative;
+    right: 165px;
+    top: 368px;
+    border-radius: 16px;
+    line-height: normal;
+    padding: 15px;
+    background: #2e3092;
+    cursor: pointer;
+}
+
+
+.sitemap_info {
+    margin-left: unset !important;
+}
+
+
+
+button.search-submit2 {
+    padding: 7px 10px !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+	background-color: #2e3092;
+	color:#ffffff;
+	border:none;
+    margin: unset !important;
+    height: unset !important;
+}
+
+.site-footer ul a {
+    padding: 2px 4px;
+}
+
+.about-us-fts li a{
+	padding: 0;
+}
+
+.site-footer ul a {
+    color: #000;
+}
+
+.navimaalbhaadaon {
+    padding: 0;
+	float: none !important;
+}
+
+.navimaalbhaadaon>.new-mwnu2 {
+    -ms-transform: translateY(35%);
+    transform: translateY(35%);
+	float: right;
+}
+
+.submenu2{
+	padding-left: 10px;
+}
+
+
+.footerheader{
+	color: #1fa0b9;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.social-icon2s>a>img{
+padding-bottom: 3px;
+}
+#footer_bottom{
+	width: 100%;
+    display: inline-block;
+}
+
+.sliderbuttan2{
+	cursor: pointer;
+}
+
+
+
+.social-icon2s{
+	background-color: #0095b1;
+    padding: 6px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.getb {
+    margin-bottom: 8%;
+    margin-top: 4%;
+}
+
+.login-toggle {
+    bottom: 0;
+}
+
+.social-icon2s>a{
+	padding-left: 15px;
+}
+
+.siteinfo2{
+	float: right !important;
+}
+
+.navimaalbhaadaon ul li a:hover {
+    color: #000;
+}
+
+.navimaalbhaadaon ul li:hover {
+    background: #fff;
+}
+
+.tabs div {
+    text-align: left;
+}
+
+.form-box {
+    background: #ffffff;
+}
+
+.footer_01{
+	margin: 0 3%;
+}
+
+.accordian-box {
+    background: #ffffff none repeat scroll 0 0;
+}
+
+.accordian-box h4 {
+    background: #0095b1;
+}
+
+.getb .getlink {
+    background: #0095b1;
+}
+
+.new-mwnu25:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -9px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+.fsvideo {
+    top: 10px;
+    width: 93%;
+}
+
+.grid-hover-effect {
+    width: 93%;
+    background: #fff;
+    color: #000;
+}
+
+.grid-hover-effect h4 {
+    color: #000;
+}
+
+.new-div-video2{
+	border: 1px solid #ccc;
+}
+
+.new-div-video2:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.new-div-video3{
+	margin: 10px;
+}
+
+.newheader01>h4{
+	font-size: 38px;
+	color: #009db5;
+}
+
+.newheader01{
+	width: 100%;
+    display: inline-block;
+	text-align: center;
+	padding-top: 45px;
+	padding-bottom: 15px;
+}
+
+.navimaalbhaadaon ul ul:after {
+    border-bottom-color: #0095b1;
+}
+
+.navimaalbhaadaon ul ul {
+	background: #fff;
+	border-top: 2px solid #0095b1 !important;
+}
+
+.navimaalbhaadaon ul ul li a {
+    color: #000;
+}
+.navimaalbhaadaon ul ul li a:hover {
+    color: #0095b1;
+}
+
+.container-grids2 {
+    float: left;
+    margin: unset;
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.quick-links-button1 {
+    top: 75px;
+
+}
+
+.sliderbuttan2{
+	padding: 8px 14px;
+    font-weight: 600;
+    font-size: 18px;
+	z-index: 162;
+    border: none;
+    border-radius: 12px;
+    color: #0095b1;
+    background-color: #ffffff;
+}
+
+.slider-text {
+  width: 60%;
+}
+
+.slider-text2 {
+    float: left;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 81%;
+    bottom: 5%;
+    width: 100%;
+}
+
+.slider-text3 {
+    float: left;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    left: 10px;
+    bottom: 5%;
+    width: auto;
+}
+
+.sliderbuttan3 {
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 10px;
+    z-index: 162;
+    border: none;
+    border-radius: 12px;
+    color: #0095b1;
+    background-color: #ffffff;
+}
+
+.new-logo{
+	padding: 15px 0;
+}
+
+.model-calci{
+	width: 40%;
+	height: auto;
+}
+
+.services_cont1{
+	padding: 0 8%;
+	max-width: 100% !important;
+}
+.service_anchLink1{
+	float: left;
+    margin: 25px;
+    width: 27%;
+}
+
+.container-left{
+	margin-bottom: 20px;
+}
+
+/* .service_anchLink1:nth-child(4n) {
+    margin: 0 0 25px 0;
+} */
+
+
+@media all and (max-width:767px) {
+	.sitemap_info {
+    margin-top: 4% !important;
+    width: 100% !important;
+}
+
+.special_grids {
+    width: 100%;
+}
+
+.slider-text {
+    width: 100%;
+	left: unset;
+}
+
+body {
+    padding-top: 96px;
+}
+
+.wrapper {
+padding: 0;
+}
+
+.slider-text2{
+	display: none;
+}
+
+.quick-links-head1 {
+    width: 56px;
+	border-radius: 10px 0px 0px 10px;
+}
+
+.mobitext{
+	font-size: 11px;
+}
+
+.newheader01 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.newheader01>h4 {
+    font-size: 26px;
+	padding-top: 20px;
+}
+
+.loginmobile3{
+	padding-top: 5px;
+}
+
+.login-mobile2{
+	color: #3fafc4;
+	font-size: 14px;
+	padding-left: 10px;
+}
+
+.siteinfo {
+    margin-left: 0 !important;
+    margin: 0%;
+    width: 100% !important;
+}
+
+.container-grids2 {
+    width: 50%;
+}
+
+.ahead-box-grid {
+	display: inline-block;
+	margin: 0;
+	width: 100% !important;
+}
+
+.ahead-box-grid1 {
+    width: 100%;
+}
+
+.new-logo {
+    padding: 10px;
+}
+
+.model-calci{
+	width: 86%;
+	height: auto;
+}
+
+.service_anchLink1 {
+	width: 100%;
+	margin: 0;
+}
+
+input[type="email"] {
+    padding: 9px 8px;
+    margin-top: 20px;
+}
+
+
+
+.special_grids11 {
+	width: 100%;
+}
+
+.quick-links-button1 {
+    right: 75px !important;
+}
+
+.slider-text {
+    
+    bottom: unset;
+
+}
+
+.getb .getlink {
+    padding: 8px;
+    font-size: 10px;
+}
+
+.tabs div {
+    font-size: 10px;
+    margin: 12px 0px 5px 0px;
+}
+
+.tabs div {
+    padding: 9px;
+    background: #FFF url(../images/accordian_plus.png) no-repeat scroll 95% 6px !important;
+}
+
+.ui-accordion .ui-accordion-header {
+    font-size: 12px;
+}
+
+
+header {
+    padding: 0 4% !important;
+}
+
+.site-footer ul a {
+    font-size: 10px;
+}
+
+.top-login-container {
+    top: -450px;
+}
+
+.fsvideo {
+    top: 10px;
+    width: 85%;
+}
+
+.grid-hover-effect h4 {
+    font-size: 10px;
+}
+
+.slider-text {
+    position: relative;
+}
+
+
+.sy-pager{
+	display: none;
+}
+
+}
+
+/* ipad use */
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px){
+	.top-login-container {
+    top: -475px;
+}
+
+.sy-slide > a > img {
+    height: 35vh;
+}
+
+body {
+    padding-top: unset;
+}
+
+.quick-links-button1 {
+    right: 115px;
+}
+
+.service_anchLink1 {
+    width: 45%;
+}
+
+.special_grids11 {
+    width: 45%;
+}
+
+.ui-accordion .ui-accordion-header {
+    font-size: 16px;
+}
+
+.ahead-box-height {
+    height: auto;
+}
+
+.ahead-box-grid1 {
+    width: 100%;
+}
+
+
+
+.tabs div {
+    margin: 10px 0px 5px 0px;
+}
+
+header {
+    position: relative;
+}
+
+.slider-text{
+	top: 9px;
+}
+
+.model-calci {
+    width: 45%;
+}
+
+
+}
+
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: landscape)  {
+
+	
+	.ui-accordion .ui-accordion-header {
+		font-size:14px;
+	}
+
+	.top-login-container {
+    top: -318px;
+	}
+
+	.getb .getlink {
+    font-size: 12px;
+	}
+
+	.ahead-box-height {
+    height: auto;
+	}
+
+	.ahead-box-grid1 {
+    width: 100%;
+	}
+
+	.slider-text {
+    font-size: 12px;
+    padding: 5px 2px;
+    /* bottom: -28px; */
+	}
+
+	.service_anchLink1 {
+		float: left;
+		width: 23%;
+	}
+
+}
+
+
+@media only screen and (min-width: 1900px){
+.ahead-box-grid1 {
+    margin-top: 8% !important;
+}
+.fhead {
+    padding: 1px 0px 2% 0px;
+}
+
+.ahead-box-grid {
+    padding-top: 8% !important;
+}
+
+
+}
+
+</style>
+
+<script>
+
+$zopim(function() {
+   $zopim.livechat.hideAll();
+});
+
+</script>
+
+<script type="text/javascript" language="javascript"
+        src="https://172.28.10.208:8888/ameyochatjs/ameyo-emerge-chat.js" async
+        defer></script>
+        <script type="text/javascript">
+        var campaignId = 6;
+        var nodeflowId = 3;
+        var ameyoUrl = 'http://172.28.10.208:8888';
+        var themeID = 1;
+        var ameyo_script = document.createElement('script');
+        ameyo_script.onload = function() {
+        try {
+        initializeChat(campaignId,nodeflowId,ameyoUrl,null,null,null,themeID)
+        } catch (err) {
+        console.error( err);}
+        };
+        ameyo_script.src = ameyoUrl+"/ameyochatjs/ameyo-emerge-chat.js";
+        document.getElementsByTagName('head')[0].appendChild(ameyo_script);
+    </script>
+
 </body>
-</html> 
+</html>
+
+
+	<script >
+function validateDomestic() {
+  if (document.Locateus.locationTypeDom[0].checked==true)
+   {
+	if(document.Locateus.pincodeDom.value=="")
+	 {
+		alert("Enter a Pin Code Number, Please");
+		document.Locateus.pincodeDom.focus();
+		return false;
+	 }else if (isNaN(document.Locateus.pincodeDom.value))
+		{
+			alert("Enter a valid Pincode number, Please");
+			document.Locateus.pincodeDom.focus();
+			return false;
+		}else if (document.Locateus.pincodeDom.value.length <6)
+		{
+			alert("Enter a valid Pincode number, Please.");
+			document.Locateus.pincodeDom.focus();
+			return false;
+		}else if (document.Locateus.pincodeDom.value.length >6)
+		{
+			alert("Enter a valid Pincode number, Please.");
+			document.Locateus.pincodeDom.focus();
+			return false;
+		}else {
+			return true;
+		}
+   }else { 
+	 if(document.Locateus.pincodeDom.value=="")
+	 {
+		alert("Enter a Location Name, Please");
+		document.Locateus.pincodeDom.focus();
+		return false;
+	 }
+   }	
+	///If Location Name is less than 3 characters///
+	textVal = document.Locateus.pincodeDom.value;
+	if(textVal.length < 3) {
+		alert("Invalid Location Name");
+		document.Locateus.pincodeDom.focus();
+		return false;
+	}
+	///Ends If Location Name is less than 3 characters///
+}
+</script>
+<script>
+jQuery(function($) { 
+
+  // settings
+  var $slider = $('.slider'); // class or id of carousel slider
+  var $slide = 'li'; // could also use 'img' if you're not using a ul
+  var $transition_time = 1000; // 1 second
+  var $time_between_slides = 4000; // 4 seconds
+
+  function slides(){
+    return $slider.find($slide);
+  }
+
+  slides().fadeOut();
+
+  // set active classes
+  slides().first().addClass('active');
+  slides().first().fadeIn($transition_time);
+
+  // auto scroll 
+  $interval = setInterval(
+    function(){
+      var $i = $slider.find($slide + '.active').index();
+
+      slides().eq($i).removeClass('active');
+      slides().eq($i).fadeOut($transition_time);
+
+      if (slides().length == $i + 1) $i = -1; // loop to start
+
+      slides().eq($i + 1).fadeIn($transition_time);
+      slides().eq($i + 1).addClass('active');
+    }
+    , $transition_time +  $time_between_slides 
+  );
+
+});
+</script>
+
+
+
+		
+
+<!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?4u88QPFm0pP8XtY2LpwzBcGJLn8KYzxl";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+
+<script language="JavaScript">
+// validate signup form on keyup and submit
+
+		/* jQuery.validator.addMethod("lettersonly", function(value, element) {
+			  return this.optional(element) || /^[a-z]+$/i.test(value);
+			}, "Letters only please"); 
+			 */
+			 $.validator.addMethod("validateMe", function (value, element) { 
+				return this.optional(element) || /^[a-z]+$/i.test(value);
+			 }, 'Letters only please');
+		
+          		
+		$("#Locateus").validate({	
+
+			rules: {
+				pincodeDom1: {
+						required:true,
+						number : true,
+						minlength : 6,
+						maxlength: 6,
+					},				
+				locationDom: {
+						required:true,
+						validateMe:true, 
+						minlength : 3,
+					},
+			},
+			messages: {
+				pincodeDom1 :{
+					required : "Please enter pincode",
+					number : "Please enter number only",
+					minlength : "Min 6 digits reuired",
+					maxlength : "Max 6 digits only"
+				},
+					
+				locationDom :{					
+					required:"Please enter location",
+					validateMe:'Please enter letters only ',
+					minlength : "Min 3 charectors reuired",
+					
+				}, 
+				},
+			errorPlacement: function (error, element) {
+            var name = $(element).attr("name");
+            error.appendTo($("#" + name + "_validate"));
+        },
+			
+		});
+
+</script>
+<script> 
+  $(document).ready(function () { 
+  //$('.sy-box:last-child').hide();
+   radio = $('input[name="searchBy"]'),
+     choice = $("input[name='searchBy']:checked").val();
+    
+	 radio.change(function(e) {
+        choice = this.value;
+		if (choice === 'location') {
+				 
+				$('#pincodeDom').attr('name', 'locationDom');
+			 }else{
+				 $('#pincodeDom').attr('name', 'pincodeDom1');
+			 }
+		});
+		
+		
+  
+  }); 
+  </script>
+  <script>
+ $(document).ready(function() 
+         {
+$('.testimonials-slider').bxSlider({
+       slideWidth: 800,
+       minSlides: 1,
+       maxSlides: 1,
+       slideMargin: 32,
+       auto: true,
+       autoControls: true
+     });
+	  }); 
+</script>
+
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+	function recaptchaCallback() {
+	  $('#hiddenRecaptcha').valid();
+	  $('#hiddenRecaptcha1').valid();
+	};
+</script>
